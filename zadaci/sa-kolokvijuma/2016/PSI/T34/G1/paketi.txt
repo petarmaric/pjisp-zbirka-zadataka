@@ -1,0 +1,7 @@
+mrs     belka50     360  50 3.89
+mrs     belka100    660 100 3.89
+mrs     belka150    900 150 3.89
+teleLOL premesi100  600 100 3.97
+teleLOL premesi220 1006 220 3.97
+vim     smaragd100  590 100 3.90
+vim     smaragd250  990 250 3.90
