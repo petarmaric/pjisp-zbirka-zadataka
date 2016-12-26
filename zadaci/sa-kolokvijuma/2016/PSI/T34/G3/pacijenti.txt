@@ -1,0 +1,4 @@
+Homer  Simpson 150 1.83
+Skinny Pete     61 1.90
+Johnny Bravo    75 1.97
+Pizza  Lover    81 1.80
