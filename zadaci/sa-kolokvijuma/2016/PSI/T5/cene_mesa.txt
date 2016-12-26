@@ -1,0 +1,6 @@
+NS svinjetina 429.99
+NS junetina   649.99
+BG junetina   639.99
+BG svinjetina 389.99
+NI svinjetina 439.99
+NI junetina   639.75
