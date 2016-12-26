@@ -1,0 +1,6 @@
+Dota2      MOBA     PC        0.00
+Fallout3   RPG      PC       19.99
+Minecraft  Sandbox  PC       19.95
+Minecraft  Sandbox  PS3      18.99
+Minecraft  Sandbox  Android   5.49
+Factorio   Sandbox  PC       12.50
