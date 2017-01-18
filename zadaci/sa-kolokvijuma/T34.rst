@@ -1,0 +1,7 @@
+Primeri zadataka za T34
+=======================
+
+.. toctree::
+   :glob:
+
+   */*/T34/*/index

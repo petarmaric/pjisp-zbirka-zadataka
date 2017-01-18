@@ -1,0 +1,7 @@
+Primeri zadataka za T5
+======================
+
+.. toctree::
+   :glob:
+
+   */*/T5/*/index
