@@ -1,0 +1,7 @@
+Primeri zadataka za T12
+=======================
+
+.. toctree::
+   :glob:
+
+   */*/T12/*/index
