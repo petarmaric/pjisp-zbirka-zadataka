@@ -45,8 +45,13 @@ source_suffix = '.rst'
 master_doc = 'zbirka'
 
 # General information about the project.
+import codecs
+with codecs.open('AUTHORS', 'r', 'utf-8') as fp:
+    authors_list = [line.split(' <')[0] for line in fp]
+    authors_str = u', '.join(authors_list)
+author = authors_str
+
 project = u'PJISP zbirka zadataka'
-author = u'Srđan Popov, Petar Marić, Rade Radišić, Tamara Komnenić'
 copyright = u'2017, ' + author
 
 # The version info for the project you're documenting, acts as replacement for
