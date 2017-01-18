@@ -3,10 +3,13 @@ Učitati n elemenata a zatim naći 2 elementa čija je razlika najveća.
 Sprovesti zaštitu unosa nad podatkom n.
 Ako se vrši sortiranje, svejedno je koji će se algoritam koristiti.
 
-Za sledeće ulazne podatke:
+Za sledeće ulazne podatke::
+
 	n = 5
 	A = {4, 2, 6, -7, 1}
-očekivani izlaz je u sledećem formatu:
+
+očekivani izlaz je u sledećem formatu::
+
 	A[0] = 4
 	A[1] = 2
 	A[2] = 6
