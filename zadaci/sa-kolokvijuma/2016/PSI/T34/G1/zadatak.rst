@@ -29,7 +29,7 @@ sa ``mesecno_poruka=237``, zadatim ulazom u datoteci ``paketi.txt``::
 	vim     smaragd100  590 100 3.90
 	vim     smaragd250  990 250 3.90
 
-i očekivanim izlazom u datoteci :file:`cene.txt`::
+i očekivanim izlazom u datoteci ``cene.txt``::
 
 	1087.43 mrs belka50
 	1192.93 mrs belka100
