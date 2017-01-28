@@ -17,3 +17,5 @@ def setup(app):
 
     te.tex_replacements += replacement_list
     te.init()
+    
+    return {'parallel_read_safe': True}
