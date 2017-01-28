@@ -3,3 +3,4 @@ syntax: glob
 *.out
 _build/
 TODO.rst
+*.pyc
