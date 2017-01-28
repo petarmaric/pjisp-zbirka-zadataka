@@ -10,14 +10,14 @@ Kategorizacija indeksa telesne mase (:math:`BMI = \dfrac{masa}{visina^2}`):
 
 .. tabularcolumns:: |R|L|
 
-===========================  ==================
-Indeks                       Dijagnoza
-===========================  ==================
-BMI < 18.5                   Pothranjenost
-18.5 :math:`\le` BMI < 25.0  Idealna tezina
-25.0 :math:`\le` BMI < 30.0  Prekomerna tezina
-BMI :math:`\ge` 30.0         Gojaznost
-===========================  ==================
+=================  ==================
+Indeks             Dijagnoza
+=================  ==================
+       BMI < 18.5  Pothranjenost
+18.5 ≤ BMI < 25.0  Idealna tezina
+25.0 ≤ BMI < 30.0  Prekomerna tezina
+       BMI ≥ 30.0  Gojaznost
+=================  ==================
 
 Formirati novi statički niz struktura i upisati ga u zadatu izlaznu datoteku,
 pri čemu se struktura ``analiza_st`` sastoji od sledećih polja:
