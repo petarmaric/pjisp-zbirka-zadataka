@@ -13,8 +13,8 @@ Na osnovu zadatog tipa analize ``tip_analize`` (``holesterol``, ``pritisak`` ili
 Tip analize  Prihvatljiv opseg
 ===========  =================
 holesterol   holesterol < 5.2
-pritisak     90  :math:`\le` pritisak < 120
-secer        3.9 :math:`\le` secer < 5.6
+pritisak     90 ≤ pritisak < 120
+secer        3.9 ≤ secer < 5.6
 ===========  =================
 
 formirati novi statički niz struktura i upisati ga u zadatu izlaznu datoteku,
