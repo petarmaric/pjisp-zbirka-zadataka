@@ -54,9 +54,16 @@ def pdflatex(filename):
     })
 
 
+@task
+def lint():
+    sphinx_build('lint')
+
+
 @task(default=True)
 def rebuild_all():
     clean()
+
+    lint()
 
     for builder_name in SPHINX_BUILDERS:
         sphinx_build(builder_name)

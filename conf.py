@@ -33,6 +33,7 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = [
     'sphinx.ext.mathjax',
     'extra_texescape',
+    'lint',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
