@@ -25,7 +25,8 @@ typedef enum {HOLESTEROL, PRITISAK, SECER} TIP_ANALIZE;
 FILE *safe_fopen(char filename[], char mode[], int error_code);
 void ucitaj_pacijente(FILE *in, struct pacijent_st pacijenti[], int *n);
 int analiza_ok(struct pacijent_st pacijent, TIP_ANALIZE tip_analize);
-void transform(struct pacijent_st pacijenti[], struct analiza_st analize[], int n, TIP_ANALIZE tip_analize);
+void transform(struct pacijent_st pacijenti[], struct analiza_st analize[],
+int n, TIP_ANALIZE tip_analize);
 void snimi_analize(FILE *out, struct analiza_st analize[], int n);
 
 
@@ -91,21 +92,22 @@ void ucitaj_pacijente(FILE *in, struct pacijent_st pacijenti[], int *n) {
     }
 }
 
-int analiza_ok(struct pacijent_st pacijent, TIP_ANALIZE tip_analize) {
+int analiza_ok(struct pacijent_st p, TIP_ANALIZE tip_analize) {
     switch (tip_analize) {
-        case HOLESTEROL: return pacijent.holesterol < 5.2;
-        case PRITISAK:   return (pacijent.pritisak >= 90) && (pacijent.pritisak < 120);
-        case SECER:      return (pacijent.secer >= 3.9) && (pacijent.secer < 5.6);
+        case HOLESTEROL: return p.holesterol < 5.2;
+        case PRITISAK:   return (p.pritisak >= 90) && (p.pritisak < 120);
+        case SECER:      return (p.secer >= 3.9) && (p.secer < 5.6);
     }
 }
 
-void transform(struct pacijent_st pacijenti[], struct analiza_st analize[], int n, TIP_ANALIZE tip_analize) {
+void transform(struct pacijent_st pacijenti[], struct analiza_st analize[],
+int n, TIP_ANALIZE tip_analize) {
     int i;
     for(i=0; i<n; i++) {
         strcpy(analize[i].ime, pacijenti[i].ime);
         strcpy(analize[i].prezime, pacijenti[i].prezime);
 
-        analize[i].upozorenje = analiza_ok(pacijenti[i], tip_analize) ? '-' : '+';
+        analize[i].upozorenje = analiza_ok(pacijenti[i], tip_analize) ? '-':'+';
     }
 }
 

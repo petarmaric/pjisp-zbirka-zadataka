@@ -24,7 +24,8 @@ struct analiza_st {
 FILE *safe_fopen(char filename[], char mode[], int error_code);
 void ucitaj_pacijente(FILE *in, struct pacijent_st pacijenti[], int *n);
 double odredi_bmi(struct pacijent_st pacijent);
-void transform(struct pacijent_st pacijenti[], struct analiza_st analize[], int n);
+void transform(struct pacijent_st pacijenti[], struct analiza_st analize[],
+int n);
 void snimi_analize(FILE *out, struct analiza_st analize[], int n);
 
 
@@ -80,7 +81,8 @@ double odredi_bmi(struct pacijent_st pacijent) {
     return pacijent.masa / (pacijent.visina * pacijent.visina);
 }
 
-void transform(struct pacijent_st pacijenti[], struct analiza_st analize[], int n) {
+void transform(struct pacijent_st pacijenti[], struct analiza_st analize[],
+int n) {
     int i;
     for(i=0; i<n; i++) {
         strcpy(analize[i].ime, pacijenti[i].ime);

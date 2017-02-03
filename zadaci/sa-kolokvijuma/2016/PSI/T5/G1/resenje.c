@@ -90,10 +90,13 @@ MESO *get_najpovoljnije_meso(MESO *head, char vrsta_mesa[]) {
 
     MESO *best = NULL;
     while(head != NULL) {
-        if (strcmp(head->vrsta_mesa, vrsta_mesa) == 0) { // Gledamo samo meso koje je odgovarajuce vrste
-            if (best == NULL) { // Pre ovoga sigurno nije bilo mesa koje je odgovarajuce vrste
+        if (strcmp(head->vrsta_mesa, vrsta_mesa) == 0) {
+            // Gledamo samo meso koje je odgovarajuce vrste
+            if (best == NULL) {
+                // Pre ovoga sigurno nije bilo mesa koje je odgovarajuce vrste
                 best = head;
-            } else if (head->cena < best->cena) { // Nadjeno povoljnije meso, koje je odgovarajuce vrste
+            } else if (head->cena < best->cena) {
+                // Nadjeno povoljnije meso, koje je odgovarajuce vrste
                 best = head;
             }
         }

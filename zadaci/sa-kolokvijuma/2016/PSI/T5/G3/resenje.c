@@ -45,13 +45,13 @@ IGRA *create_new_item(char igra[], char zanr[], char platforma[], double cena) {
 }
 
 void read_list_from(FILE *in, IGRA **head) {
-    char tmp_igra[MAX_IGRA];
-    char tmp_zanr[MAX_ZANR];
-    char tmp_platforma[MAX_PLATFORMA];
-    double tmp_cena;
+    char igra[MAX_IGRA];
+    char zanr[MAX_ZANR];
+    char platforma[MAX_PLATFORMA];
+    double cena;
     
-    while(fscanf(in, "%s %s %s %lf", tmp_igra, tmp_zanr, tmp_platforma, &tmp_cena) != EOF) {
-        IGRA *new = create_new_item(tmp_igra, tmp_zanr, tmp_platforma, tmp_cena);
+    while(fscanf(in, "%s %s %s %lf", igra, zanr, platforma, &cena) != EOF) {
+        IGRA *new = create_new_item(igra, zanr, platforma, cena);
         add_to_list(new, head);
     }
 }
@@ -94,10 +94,14 @@ IGRA *get_najpovoljnija_igra(IGRA *head, char zanr[], char platforma[]) {
 
     IGRA *best = NULL;
     while(head != NULL) {
-        if (strcmp(head->zanr, zanr) == 0 && strcmp(head->platforma, platforma) == 0) { // Gledamo samo igre koje su OK
-            if (best == NULL) { // Pre ovoga sigurno nije bilo igre koja je OK
+        if (strcmp(head->zanr, zanr) == 0 &&
+            strcmp(head->platforma, platforma) == 0) {
+            // Gledamo samo igre koje su OK
+            if (best == NULL) {
+                // Pre ovoga sigurno nije bilo igre koja je OK
                 best = head;
-            } else if (head->cena < best->cena) { // Nadjena povoljnija igra, koja je OK
+            } else if (head->cena < best->cena) {
+                // Nadjena povoljnija igra, koja je OK
                 best = head;
             }
         }
@@ -130,7 +134,10 @@ int main(int arg_num, char *args[]) {
 
     IGRA *best = get_najpovoljnija_igra(head, zanr, platforma);
     if (best == NULL) {
-        fprintf(out, "\nZa %s platformu ne postoje '%s' igre!\n", platforma, zanr);
+        fprintf(
+            out, "\nZa %s platformu ne postoje '%s' igre!\n",
+            platforma, zanr
+        );
     } else {
         fprintf(
             out, "\nNajpovoljnija '%s' igra za %s platformu je:\n%s %.2f\n",

@@ -23,7 +23,8 @@ struct cena_st {
 FILE *safe_fopen(char filename[], char mode[], int error_code);
 void ucitaj_pakete(FILE *in, struct paket_st paketi[], int *n);
 double cena_paketa(struct paket_st paket, int mesecno_poruka);
-void transform(struct paket_st paketi[], struct cena_st cene[], int n, int mesecno_poruka);
+void transform(struct paket_st paketi[], struct cena_st cene[], int n, 
+int mesecno_poruka);
 void snimi_cene(FILE *out, struct cena_st cene[], int n);
 
 
@@ -88,7 +89,8 @@ double cena_paketa(struct paket_st paket, int mesecno_poruka) {
     return base;
 }
 
-void transform(struct paket_st paketi[], struct cena_st cene[], int n, int mesecno_poruka) {
+void transform(struct paket_st paketi[], struct cena_st cene[], int n, 
+int mesecno_poruka) {
     int i;
     for(i=0; i<n; i++) {
         strcpy(cene[i].naziv_provajdera, paketi[i].naziv_provajdera);
