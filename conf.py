@@ -116,17 +116,10 @@ html_static_path = ['_static']
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
     'papersize': 'b5paper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
     'pointsize': '10pt',
 
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
+    'geometry': r'\usepackage[papersize={165mm,235mm}, margin=20mm]{geometry}',
 
     # Latex figure (float) alignment
     #
