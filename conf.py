@@ -121,11 +121,12 @@ latex_elements = {
 
     'geometry': r'\usepackage[papersize={165mm,235mm}, margin=20mm]{geometry}',
 
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
+    'preamble': r'\fvset{fontsize=\footnotesize}',
 
-    'preamble': r'\fvset{fontsize=\scriptsize}',
+    'fontpkg': r"""
+        \usepackage{lmodern}
+        \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
+    """,
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
