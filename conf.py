@@ -120,6 +120,7 @@ latex_elements = {
     'pointsize': '10pt',
     'geometry': r'\usepackage[papersize={165mm,235mm}, margin=20mm]{geometry}',
 
+    'fncychap': r'\usepackage[Lenny]{fncychap}',
     'fontpkg': r"""
         \usepackage{lmodern}
         \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
