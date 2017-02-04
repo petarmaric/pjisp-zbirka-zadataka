@@ -118,15 +118,14 @@ html_static_path = ['_static']
 latex_elements = {
     'papersize': 'b5paper',
     'pointsize': '10pt',
-
     'geometry': r'\usepackage[papersize={165mm,235mm}, margin=20mm]{geometry}',
-
-    'preamble': r'\fvset{fontsize=\footnotesize}',
 
     'fontpkg': r"""
         \usepackage{lmodern}
         \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
     """,
+
+    'preamble': r'\fvset{fontsize=\footnotesize}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
