@@ -1,3 +1,9 @@
+.. index::
+   Algoritmi ; Pretraga
+   Algoritmi ; Sortiranje
+   Statičke strukture ; Niz
+
+
 Zadatak "Max zbir"
 ==================
 

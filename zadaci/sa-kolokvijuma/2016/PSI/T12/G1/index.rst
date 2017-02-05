@@ -1,3 +1,8 @@
+.. index::
+   Algoritmi ; Pretraga
+   Statičke strukture ; Niz
+
+
 Zadatak "Max razlika"
 =====================
 

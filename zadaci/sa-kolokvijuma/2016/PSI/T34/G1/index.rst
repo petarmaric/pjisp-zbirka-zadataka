@@ -1,3 +1,8 @@
+.. index::
+   Datoteke ; Tekstualne
+   Statičke strukture ; Niz
+
+
 Zadatak "Analiza SMS cena"
 ==========================
 
