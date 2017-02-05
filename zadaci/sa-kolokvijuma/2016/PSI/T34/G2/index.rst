@@ -1,3 +1,9 @@
+.. index::
+   Algoritmi ; Pretraga
+   Datoteke ; Tekstualne
+   Statičke strukture ; Niz
+
+
 Zadatak "Krvna slika"
 =====================
 

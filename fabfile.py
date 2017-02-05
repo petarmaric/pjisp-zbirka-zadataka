@@ -83,8 +83,13 @@ def novi_zadatak_sa_kolokvijuma():
     print """
 Sve potrebne datoteke su smestene u direktorijum '%s'.
 
-Molim Vas izmenite datoteke 'zadatak.rst' i 'resenje.c', postujuci dogovorene konvencije.
-Ukoliko je to potrebno (i tacno znate sta radite) mozete izmeniti i datoteku 'index.rst'.
+Molim Vas unesite Vas sadrzaj u datoteke 'zadatak.rst' i 'resenje.c', postujuci dogovorene konvencije.
+
+Molim Vas da u datoteci 'index.rst' odaberete kategorije koje blize opisuju tematiku Vaseg zadatka.
+Ukoliko smatrate da Vam je potrebna nova kategorija, prvo se obratite Vasoj kontakt osobi:
+    Petar Maric <petarmaric@uns.ac.rs>
+
+Ukoliko je to potrebno (i tacno znate sta radite) mozete napraviti i dodatne izmene u datoteci 'index.rst'.
 
 Celokupnu knjigu potom mozete ponovo kompajlirati pozivom komande 'fab'.
 """ % zadatak_dir
@@ -118,13 +123,22 @@ def build_books():
     os.chdir(os.path.join(SPHINX_BUILD_DIR, 'latex'))
     for filename in fnmatch.filter(os.listdir('.'), '*.tex'):
         pdflatex(filename)
+        makeindex(filename)
         pdflatex(filename)
+        pdflatex(filename)
+
     print "Build finished; the PDF files are in %s\latex\%s." % (SPHINX_BUILD_DIR, LATEX_BUILD_DIR)
 
 def pdflatex(filename):
     local("pdflatex -quiet -aux-directory=%(build_dir)s -output-directory=%(build_dir)s -interaction=nonstopmode -halt-on-error %(filename)s" % {
         'build_dir': LATEX_BUILD_DIR,
         'filename': filename,
+    })
+
+def makeindex(filename):
+    local("makeindex -q -s python.ist %(build_dir)s/%(basename)s.idx" % {
+        'build_dir': LATEX_BUILD_DIR,
+        'basename': os.path.splitext(filename)[0],
     })
 
 

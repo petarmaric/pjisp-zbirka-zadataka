@@ -1,3 +1,9 @@
+.. index::
+   Algoritmi ; Pretraga
+   Datoteke ; Tekstualne
+   Dinamičke strukture ; Lista
+
+
 Zadatak "Najpovoljnija igra"
 ============================
 
