@@ -1,5 +1,5 @@
-Primeri zadataka za T5
-======================
+Primeri zadataka za predmetni projekat
+======================================
 
 .. toctree::
    :glob:
