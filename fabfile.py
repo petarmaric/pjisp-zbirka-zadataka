@@ -3,7 +3,7 @@ import fnmatch
 import os
 import shutil
 
-from fabric.api import abort, local, prompt, task
+from fabric.api import abort, env, local, prompt, task
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -23,8 +23,6 @@ SPHINX_BUILDERS = [
     'singlehtml',
     'text',
 ]
-
-LATEX_BUILD_DIR = 'pdf'
 
 
 def validate_choice(choices, coerce=None):
@@ -120,26 +118,28 @@ def build_books():
     sphinx_build('latex')
 
     print 'Building books...'
+    env.is_miktex = is_miktex()
+    
     os.chdir(os.path.join(SPHINX_BUILD_DIR, 'latex'))
     for filename in fnmatch.filter(os.listdir('.'), '*.tex'):
         pdflatex(filename)
         makeindex(filename)
         pdflatex(filename)
         pdflatex(filename)
+    
+    print "Build finished; the PDF files are in %s." % os.path.join(SPHINX_BUILD_DIR, 'latex')
 
-    print "Build finished; the PDF files are in %s\latex\%s." % (SPHINX_BUILD_DIR, LATEX_BUILD_DIR)
+def is_miktex():
+    return 'MiKTeX' in local('pdflatex -version', capture=True)
 
 def pdflatex(filename):
-    local("pdflatex -quiet -aux-directory=%(build_dir)s -output-directory=%(build_dir)s -interaction=nonstopmode -halt-on-error %(filename)s" % {
-        'build_dir': LATEX_BUILD_DIR,
+    local("pdflatex %(be_quiet)s -interaction=nonstopmode -halt-on-error %(filename)s" % {
         'filename': filename,
+        'be_quiet': '-quiet' if env.is_miktex else '' # TexLive (used by Ubuntu) doesn't support the '-quiet' CLI flag
     })
 
 def makeindex(filename):
-    local("makeindex -q -s python.ist %(build_dir)s/%(basename)s.idx" % {
-        'build_dir': LATEX_BUILD_DIR,
-        'basename': os.path.splitext(filename)[0],
-    })
+    local("makeindex -q -s python.ist %s.idx" % os.path.splitext(filename)[0])
 
 
 @task
