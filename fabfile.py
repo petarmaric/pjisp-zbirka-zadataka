@@ -82,12 +82,15 @@ def novi_zadatak_sa_kolokvijuma():
 Sve potrebne datoteke su smestene u direktorijum '%s'.
 
 Molim Vas unesite Vas sadrzaj u datoteke 'zadatak.rst' i 'resenje.c', postujuci dogovorene konvencije.
+Molim Vas ukljucite i sve potrebne ulazne i (generisane) izlazne datoteke ako ih 'resenje.c' koristi.
 
 Molim Vas da u datoteci 'index.rst' odaberete kategorije koje blize opisuju tematiku Vaseg zadatka.
 Ukoliko smatrate da Vam je potrebna nova kategorija, prvo se obratite Vasoj kontakt osobi:
     Petar Maric <petarmaric@uns.ac.rs>
 
 Ukoliko je to potrebno (i tacno znate sta radite) mozete napraviti i dodatne izmene u datoteci 'index.rst'.
+
+OBAVEZNO temeljno testirajte 'resenje.c'!
 
 Celokupnu knjigu potom mozete ponovo kompajlirati pozivom komande 'fab'.
 """ % zadatak_dir
