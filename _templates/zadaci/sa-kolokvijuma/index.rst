@@ -4,6 +4,7 @@
    Algoritmi ; Sortiranje
    Datoteke ; Binarne
    Datoteke ; Tekstualne
+   Dinamičke strukture ; Dinamički niz
    Dinamičke strukture ; Lista
    Dinamičke strukture ; Stablo
    Dinamičke strukture ; Stek
