@@ -4,3 +4,4 @@ syntax: glob
 _build/
 TODO.rst
 *.pyc
+*.swp
