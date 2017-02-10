@@ -127,6 +127,13 @@ latex_elements = {
     """,
 
     'preamble': r'\fvset{fontsize=\footnotesize}',
+    'printindex': r"""
+        \renewcommand{\indexname}{Indeks zadataka po kategorijama}
+        \if@openright\cleardoublepage\else\clearpage\fi
+        \phantomsection
+        \addcontentsline{toc}{chapter}{\indexname}
+        \printindex
+    """,
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
