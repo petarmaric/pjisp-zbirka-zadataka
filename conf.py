@@ -141,5 +141,5 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'zbirka.tex', u'PJISP zbirka zadataka',
-     u'\\and '.join(authors_list), 'manual'),
+     r' \\ '.join(authors_list), 'manual'),
 ]
