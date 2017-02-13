@@ -132,7 +132,13 @@ latex_elements = {
         r'InnerLinkColor={named}{black}',
     ]),
 
-    'preamble': r'\fvset{fontsize=\footnotesize}',
+    'preamble': r"""
+        \fvset{fontsize=\footnotesize}
+
+        % Converts all colors to the 'gray' color model
+        \selectcolormodel{gray}
+    """,
+
     'printindex': r"""
         \renewcommand{\indexname}{Indeks zadataka po kategorijama}
         \cleardoublepage
