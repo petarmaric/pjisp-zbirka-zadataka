@@ -126,6 +126,12 @@ latex_elements = {
         \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
     """,
 
+    'sphinxsetup': ', '.join([
+        # Color options
+        r'TitleColor={named}{black}',
+        r'InnerLinkColor={named}{black}',
+    ]),
+
     'preamble': r'\fvset{fontsize=\footnotesize}',
     'printindex': r"""
         \renewcommand{\indexname}{Indeks zadataka po kategorijama}
