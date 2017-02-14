@@ -132,6 +132,10 @@ latex_elements = {
         r'InnerLinkColor={named}{black}',
     ]),
 
+    'passoptionstopackages': r"""
+        \PassOptionsToPackage{pdfpagelayout=TwoPageRight}{hyperref}
+    """,
+
     'preamble': r"""
         \fvset{fontsize=\footnotesize}
 
