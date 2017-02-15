@@ -148,6 +148,8 @@ latex_elements = {
     'preamble': r"""
         \fvset{fontsize=\footnotesize}
 
+        \renewcommand{\sphinxstylethead}{\textbf}
+
         % Converts all colors to the 'gray' color model
         \selectcolormodel{gray}
     """,
