@@ -142,7 +142,7 @@ latex_elements = {
     ]),
 
     'passoptionstopackages': r"""
-        \PassOptionsToPackage{pdfpagelayout=TwoPageRight}{hyperref}
+        \PassOptionsToPackage{pdfusetitle, pdfpagelayout=TwoPageRight}{hyperref}
     """,
 
     'preamble': r"""
