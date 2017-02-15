@@ -130,7 +130,13 @@ latex_elements = {
         # Converts all 'headers' to use serif fonts instead of sans-serif (which are ugly by default)
         r'HeaderFamily=\rmfamily\bfseries',
 
+        # Code listing options
+        r'verbatimwithframe=false',
+        r'verbatimwrapslines=false',
+        r'inlineliteralwraps=false',
+
         # Color options
+        r'VerbatimColor={gray}{0.96}',
         r'TitleColor={named}{black}',
         r'InnerLinkColor={named}{black}',
     ]),
