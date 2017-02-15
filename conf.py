@@ -127,6 +127,9 @@ latex_elements = {
     """,
 
     'sphinxsetup': ', '.join([
+        # Converts all 'headers' to use serif fonts instead of sans-serif (which are ugly by default)
+        r'HeaderFamily=\rmfamily\bfseries',
+
         # Color options
         r'TitleColor={named}{black}',
         r'InnerLinkColor={named}{black}',
