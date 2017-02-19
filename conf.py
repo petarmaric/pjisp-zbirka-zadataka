@@ -122,7 +122,7 @@ latex_elements = {
 
     'fncychap': r'\usepackage[Rejne]{fncychap}',
     'fontpkg': r"""
-        \usepackage{lmodern}
+        \usepackage{newpxtext,newpxmath} % http://www.tug.dk/FontCatalogue/newpx/ and http://tex.stackexchange.com/a/119549/19772
         \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
     """,
 
