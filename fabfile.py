@@ -142,7 +142,7 @@ def pdflatex(filename):
     })
 
 def makeindex(filename):
-    local("makeindex -q -s python.ist %s.idx" % os.path.splitext(filename)[0])
+    local("makeindex -q %s.idx" % os.path.splitext(filename)[0])
 
 
 @task
