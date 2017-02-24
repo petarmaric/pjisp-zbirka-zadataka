@@ -5,3 +5,4 @@ Primeri zadataka za predmetni projekat
    :glob:
 
    */*/T5/*/index
+   */*/TP/*/index
