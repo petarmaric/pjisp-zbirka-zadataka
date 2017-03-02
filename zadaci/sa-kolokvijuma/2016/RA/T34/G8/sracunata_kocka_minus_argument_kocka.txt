@@ -1,0 +1,3 @@
+Zapremina sracunate kocke: 1122.37
+Zapremina argument kocke: 125.00
+Razlika u zapreminama: 997.37
