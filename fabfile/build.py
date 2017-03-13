@@ -42,6 +42,7 @@ def build_books():
     print 'Building books...'
     env.is_miktex = is_miktex()
     
+    base_dir = os.getcwd()
     os.chdir(os.path.join(SPHINX_BUILD_DIR, 'latex'))
     for filename in fnmatch.filter(os.listdir('.'), '*.tex'):
         pdflatex(filename)
@@ -49,6 +50,7 @@ def build_books():
         pdflatex(filename)
         pdflatex(filename)
     
+    os.chdir(base_dir)
     print "Build finished; the PDF files are in %s." % os.path.join(SPHINX_BUILD_DIR, 'latex')
 
 def is_miktex():
