@@ -9,6 +9,7 @@ from fabric.api import task
 
 import build
 import novi_zadatak
+import publish
 
 
 @task(default=True)
