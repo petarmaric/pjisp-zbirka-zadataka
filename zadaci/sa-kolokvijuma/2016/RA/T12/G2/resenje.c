@@ -16,7 +16,8 @@ int main() {
     do {
       printf("DNK[%d] = ", i+1);
       scanf(" %c", &DNA_part[i]);
-    } while (!(DNA_part[i] == 'A' || DNA_part[i] == 'G' || DNA_part[i] == 'T' || DNA_part[i] == 'C'));
+    } while (!(DNA_part[i] == 'A' || DNA_part[i] == 'G' 
+             || DNA_part[i] == 'T' || DNA_part[i] == 'C'));
   }
 
   do {
@@ -45,7 +46,8 @@ int main() {
 
   }
 
-  printf("Baza %c predstavlja %.0f%% ovog lanca DNK.\n", base, base_count*1.0/n*100);
+  printf("Baza %c predstavlja ", base); 
+  printf("%.0f%% ovog lanca DNK.\n", base_count * 1.0 / n * 100);
 
   printf("U unetom delu DNK nalazi se ukupno %d vodonicne veze.\n", h_bond);
 
