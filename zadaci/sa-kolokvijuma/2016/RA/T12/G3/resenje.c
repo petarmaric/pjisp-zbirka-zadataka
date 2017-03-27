@@ -39,7 +39,8 @@ int main(){
   }
   printf("]\n");
 
-  printf("Srednja vrednost parnih elemenata niza iznosi %.2f\n", even_sum*1.0/even_count);
+  printf("Srednja vrednost parnih elemenata niza iznosi");
+  printf("%.2f\n", even_sum * 1.0 / even_count);
 
   int is_sorted = 1;
   for (i = 0; i < n - 1; i++) {
