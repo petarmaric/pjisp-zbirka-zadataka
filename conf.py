@@ -32,6 +32,11 @@ sys.path.insert(0, os.path.abspath('_ext'))
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
+
+    # external
+    'sphinxcontrib.googleanalytics',
+
+    # local
     'extra_texescape',
     'lint',
 ]
@@ -111,6 +116,10 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ['_static']
+
+# Google Analytics tracking ID for the HTML version of our book,
+# published at http://pjisp.petarmaric.com/zbirka
+googleanalytics_id = 'UA-91194-14'
 
 
 # -- Options for LaTeX output ---------------------------------------------
