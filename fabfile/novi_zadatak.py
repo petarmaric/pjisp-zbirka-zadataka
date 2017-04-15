@@ -8,7 +8,9 @@ from jinja2 import Environment, FileSystemLoader
 VALID_SMEROVI = 'E1, PSI, RA'.split(', ')
 VALID_KOLOKVIJUMI = 'T12, T34, T5, TP'.split(', ')
 MAX_GRUPA = 9
-VALID_GRUPE = ["G%d" % x for x in xrange(1, MAX_GRUPA+1)]
+MAX_GRUPA_STARI_STUDENTI = 4
+VALID_GRUPE = ["G%d" % x for x in xrange(1, MAX_GRUPA+1)] + \
+              ["S%d" % x for x in xrange(1, MAX_GRUPA_STARI_STUDENTI+1)]
 
 ZADACI_BASE_DIR = 'zadaci'
 ZADACI_SA_KOLOKVIJUMA_DIR = os.path.join(ZADACI_BASE_DIR, 'sa-kolokvijuma')
@@ -18,11 +20,11 @@ def validate_choice(choices, coerce=None):
     def validate(x):
         if callable(coerce):
             x = coerce(x)
-        
+
         if x not in choices:
             raise ValueError("%s is not a valid choice" % x)
         return x
-    
+
     return validate
 
 def prompt_choice(question, choices, coerce=None):
@@ -37,7 +39,7 @@ def sa_kolokvijuma():
     skolska_godina = today.year
     if today.month < 10: # Smatraj da tek od oktobra pocinje nova skolska godina
         skolska_godina -= 1
-    
+
     print 'Molim Vas odgovorite na narednih nekoliko pitanja da bismo Vam pomogli da dodate novi zadatak sa kolokvijuma.\n'
 
     skolska_godina = str(prompt('Koje skolske godine se radio kolokvijum?', default=skolska_godina, validate=int))
@@ -45,7 +47,7 @@ def sa_kolokvijuma():
     kolokvijum = prompt_choice('Koji kolokvijum', VALID_KOLOKVIJUMI, str.upper)
     grupa = prompt_choice('Koja grupa', VALID_GRUPE, str.upper)
     naziv = prompt('Unesite kratak i opisan naziv zadatka:')
-    
+
     print '\nPravim zadatak:'
 
     zadatak_dir = os.path.join(ZADACI_SA_KOLOKVIJUMA_DIR, skolska_godina, smer, kolokvijum, grupa)
@@ -61,7 +63,7 @@ def sa_kolokvijuma():
             'naziv': naziv,
             'zadatak_dir': zadatak_dir.replace('\\', '/'),
         }).dump(os.path.join(zadatak_dir, filename), encoding='utf-8')
-    
+
     for filename in ['zadatak.rst', 'resenje.c', 'index.rst']:
         print "\tPravim template datoteku '%s'..." % filename,
         create_file_from_template(filename)
