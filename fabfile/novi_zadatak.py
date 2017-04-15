@@ -1,5 +1,7 @@
 from datetime import date
+import locale
 import os
+import sys
 
 from fabric.api import abort, prompt, task
 from jinja2 import Environment, FileSystemLoader
@@ -60,7 +62,7 @@ def sa_kolokvijuma():
     env = Environment(loader=FileSystemLoader('_templates/zadaci/sa-kolokvijuma'), keep_trailing_newline=True)
     def create_file_from_template(filename):
         env.get_template(filename).stream({
-            'naziv': naziv,
+            'naziv': naziv.decode(sys.stdin.encoding or locale.getpreferredencoding(True)), # based on http://stackoverflow.com/a/477496
             'zadatak_dir': zadatak_dir.replace('\\', '/'),
         }).dump(os.path.join(zadatak_dir, filename), encoding='utf-8')
 
