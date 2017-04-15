@@ -121,6 +121,9 @@ html_theme_options = {
 # published at http://pjisp.petarmaric.com/zbirka
 googleanalytics_id = 'UA-91194-14'
 
+# If True, the reST sources are included in the HTML build under '_sources/'.
+html_copy_source = False
+
 
 # -- Options for LaTeX output ---------------------------------------------
 

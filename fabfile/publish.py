@@ -10,6 +10,5 @@ def html():
     rsync_project(
         local_dir='_build/html/',
         remote_dir='~/sites/pjisp.petarmaric.com/zbirka/',
-        exclude='_sources/',
         delete=True,
     )
