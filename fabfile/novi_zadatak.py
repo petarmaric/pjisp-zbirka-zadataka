@@ -5,7 +5,7 @@ from fabric.api import abort, prompt, task
 from jinja2 import Environment, FileSystemLoader
 
 
-VALID_SMEROVI = 'E1, PSI, RA'.split(', ')
+VALID_SMEROVI = 'E1, EM, PSI, RA'.split(', ')
 VALID_KOLOKVIJUMI = 'T12, T34, T5, TP'.split(', ')
 MAX_GRUPA = 9
 MAX_GRUPA_STARI_STUDENTI = 4
