@@ -138,6 +138,8 @@ latex_elements = {
         \IfFileExists{zi4.sty}{\usepackage{zi4}}{\usepackage{inconsolata}} % 'Inconsolata' is my monospace font of choice
     """,
 
+    'figure_align': 'H',
+
     'sphinxsetup': ', '.join([
         # Converts all 'headers' to use serif fonts instead of sans-serif (which are ugly by default)
         r'HeaderFamily=\rmfamily\bfseries',
