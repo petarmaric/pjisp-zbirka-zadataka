@@ -49,7 +49,7 @@ exhaustive, and do not form part of our licenses.
      such as asking that all changes be marked or described.
      Although not required by our licenses, you are encouraged to
      respect those requests where reasonable. More considerations
-     for the public: 
+     for the public:
 	wiki.creativecommons.org/Considerations_for_licensees
 
 =======================================================================
@@ -253,12 +253,12 @@ following conditions.
                     the Licensor (including by pseudonym if
                     designated);
 
-                ii. a copyright notice;
+                 ii. a copyright notice;
 
-               iii. a notice that refers to this Public License;
+                 iii. a notice that refers to this Public License;
 
-                iv. a notice that refers to the disclaimer of
-                    warranties;
+                 iv. a notice that refers to the disclaimer of
+                     warranties;
 
                  v. a URI or hyperlink to the Licensed Material to the
                     extent reasonably practicable;
