@@ -6,3 +6,4 @@ PJISP zbirka zadataka
    :glob:
 
    zadaci/sa-kolokvijuma/*
+   LICENSE
