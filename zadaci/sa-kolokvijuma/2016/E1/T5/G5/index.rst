@@ -6,6 +6,8 @@
 Zadatak "50 nijansi istine"
 ===========================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

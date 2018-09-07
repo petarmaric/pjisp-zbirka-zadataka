@@ -7,6 +7,8 @@
 Zadatak "Neizbežna posledica života"
 ====================================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

@@ -5,6 +5,8 @@
 Zadatak "Vrednost veće od srednje"
 ==================================
 
+.. sectionauthor:: Srđan Popov <srdjanpopov@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

@@ -6,6 +6,8 @@
 Zadatak "Poslednje cifre jednake"
 =================================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

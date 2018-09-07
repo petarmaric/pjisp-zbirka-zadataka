@@ -6,6 +6,8 @@
 Zadatak "Max razlika"
 =====================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

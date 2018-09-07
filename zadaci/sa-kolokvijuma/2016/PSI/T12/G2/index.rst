@@ -7,6 +7,8 @@
 Zadatak "Max zbir"
 ==================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 
