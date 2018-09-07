@@ -7,6 +7,8 @@
 Zadatak "Spektroskopija: teški metali u piću"
 =============================================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

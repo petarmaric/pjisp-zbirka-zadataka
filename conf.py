@@ -96,6 +96,8 @@ pygments_style = 'trac'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+# If true, `codeauthor` and `sectionauthor` directives produce output, else they produce nothing.
+show_authors = True
 
 # -- Options for HTML output ----------------------------------------------
 

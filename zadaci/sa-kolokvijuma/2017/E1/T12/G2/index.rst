@@ -6,6 +6,8 @@
 Zadatak "Neparni susedi"
 ========================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

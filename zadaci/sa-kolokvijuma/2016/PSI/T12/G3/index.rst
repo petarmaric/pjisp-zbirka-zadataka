@@ -6,6 +6,8 @@
 Zadatak "Zbir kvadrata dvocifrenih brojeva"
 ===========================================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

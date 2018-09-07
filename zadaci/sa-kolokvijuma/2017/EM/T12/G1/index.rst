@@ -6,6 +6,8 @@
 Zadatak "Apsolutno jednaki"
 ===========================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 

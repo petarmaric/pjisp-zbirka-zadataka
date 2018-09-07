@@ -6,6 +6,8 @@
 Zadatak "Sumiranje odnazad"
 ===========================
 
+.. sectionauthor:: Petar Marić <petarmaric@uns.ac.rs>
+
 .. include:: zadatak.rst
 
 
