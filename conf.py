@@ -33,11 +33,9 @@ sys.path.insert(0, os.path.abspath('_ext'))
 extensions = [
     'sphinx.ext.mathjax',
 
-    # external
-    'sphinxcontrib.googleanalytics',
-
     # local
     'extra_texescape',
+    'googleanalytics_quickfix',
     'lint',
 ]
 
