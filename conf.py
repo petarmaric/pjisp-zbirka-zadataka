@@ -61,7 +61,9 @@ with codecs.open('AUTHORS', 'r', 'utf-8') as fp:
 author = authors_str
 
 project = u'PJISP zbirka zadataka'
-copyright = u'2017, ' + author
+
+from datetime import date
+copyright = u'%s, %s' % (date.today().year, author)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
