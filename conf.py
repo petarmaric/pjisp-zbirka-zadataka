@@ -183,6 +183,8 @@ latex_elements = {
         \makeatother
     """,
 
+    'releasename': ' ',
+
     'printindex': r"""
         \renewcommand{\indexname}{Indeks zadataka po kategorijama}
         \cleardoublepage
