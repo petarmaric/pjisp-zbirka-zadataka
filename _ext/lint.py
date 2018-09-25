@@ -1,5 +1,6 @@
 from docutils import nodes
 from sphinx.builders import Builder
+from sphinx.util import status_iterator
 
 
 class LintBuilder(Builder):
@@ -12,7 +13,7 @@ class LintBuilder(Builder):
         return self.env.found_docs
 
     def write(self, build_docnames, updated_docnames, method='update'):
-        for docname in self.app.status_iterator(sorted(build_docnames), 'running lint... '):
+        for docname in status_iterator(sorted(build_docnames), 'running lint... ', length=len(build_docnames)):
             self.check_doc(docname, self.env.get_doctree(docname))
 
         for warning in self.warnings:
