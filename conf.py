@@ -150,6 +150,7 @@ latex_elements = {
         r'verbatimwithframe=false',
         r'verbatimwrapslines=false',
         r'inlineliteralwraps=false',
+        r'verbatimhintsturnover=false',
 
         # Color options
         r'VerbatimColor={gray}{0.96}',
