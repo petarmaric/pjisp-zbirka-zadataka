@@ -170,7 +170,7 @@ latex_elements = {
     'preamble': r"""
         \fvset{fontsize=\footnotesize}
 
-        \renewcommand{\sphinxstylethead}{\textbf}
+        \renewcommand{\sphinxstylethead}{\rmfamily\bfseries}
 
         % Converts all colors to the 'gray' color model
         \selectcolormodel{gray}
