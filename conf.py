@@ -169,22 +169,7 @@ latex_elements = {
 
         % Converts all colors to the 'gray' color model
         \selectcolormodel{gray}
-
-        % Remove the '\py@release' bit from the header line of the 'normal' pagestyle
-        \makeatletter
-        \fancypagestyle{normal}{
-            \fancyhf{}
-            \fancyfoot[LE,RO]{{\py@HeaderFamily\thepage}}
-            \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
-            \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
-            \fancyhead[LE,RO]{{\py@HeaderFamily \@title}}
-            \renewcommand{\headrulewidth}{0.4pt}
-            \renewcommand{\footrulewidth}{0.4pt}
-        }
-        \makeatother
     """,
-
-    'releasename': ' ',
 
     'printindex': r"""
         \renewcommand{\indexname}{Indeks zadataka po kategorijama}
