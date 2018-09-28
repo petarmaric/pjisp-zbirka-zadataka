@@ -160,12 +160,6 @@ latex_elements = {
 
     'passoptionstopackages': r"""
         \PassOptionsToPackage{pdfpagelayout=TwoPageRight}{hyperref}
-
-        % HACK: Temporary workaround around the "LaTeX Error: Option clash for package textcomp",
-        % until we upgrade to Sphinx>=1.7.2 where this bug has been fixed
-        %
-        % See https://github.com/sphinx-doc/sphinx/issues/4727 for details
-        \PassOptionsToPackage{warn}{textcomp}
     """,
 
     'preamble': r"""
