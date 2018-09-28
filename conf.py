@@ -112,6 +112,7 @@ html_theme = 'classic'
 #
 html_theme_options = {
     'collapsiblesidebar': True,
+    'body_max_width': None,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
