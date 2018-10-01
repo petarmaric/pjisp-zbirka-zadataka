@@ -16,10 +16,14 @@ RUN \
     # Remove the APT cache to reduce Docker image size
     && rm -rf /var/lib/apt/lists/*
 
+# Install Pipenv
+RUN pip install pipenv
+
 WORKDIR /app
 
 # Install the required Python packages
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+COPY Pipfile Pipfile
+COPY Pipfile.lock Pipfile.lock
+RUN pipenv install --deploy --system
 
 ENTRYPOINT ["fab"]
