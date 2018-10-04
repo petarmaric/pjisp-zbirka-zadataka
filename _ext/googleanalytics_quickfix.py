@@ -1,3 +1,8 @@
+# quickfix until https://bitbucket.org/birkenfeld/sphinx-contrib/issues/203/googleanalytics-needs-to-be-updated-for
+# is resolved
+from sphinx import application, errors
+application.ExtensionError = errors.ExtensionError
+
 from sphinxcontrib import googleanalytics as ga
 
 
