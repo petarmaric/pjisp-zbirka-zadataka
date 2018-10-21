@@ -1,5 +1,6 @@
 .. index::
    666999 ; Nekog je mrzelo da azurira svoje kategorije :(
+   Algoritmi ; Numerika
    Algoritmi ; Pretraga
    Algoritmi ; Sortiranje
    Datoteke ; Binarne
