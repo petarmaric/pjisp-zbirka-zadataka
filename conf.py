@@ -121,7 +121,7 @@ html_theme_options = {
 # html_static_path = ['_static']
 
 # Google Analytics tracking ID for the HTML version of our book,
-# published at http://pjisp.petarmaric.com/zbirka
+# published at http://pjisp.petarmaric.com/zbirka-zadataka
 googleanalytics_id = 'UA-91194-14'
 
 # If True, the reST sources are included in the HTML build under '_sources/'.

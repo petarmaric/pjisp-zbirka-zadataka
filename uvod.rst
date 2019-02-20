@@ -7,7 +7,7 @@ strukture podataka". Svi primeri rešenja napisani su u programskom jeziku C,
 čije poznavanje je potrebno za upotrebu zbirke.
 
 Zbirka se može kupiti u papirnom obliku ili besplatno čitati na web sajtu
-http://pjisp.petarmaric.com/zbirka.
+http://pjisp.petarmaric.com/zbirka-zadataka.
 
 Ovo delo je u celosti bazirano na tehnologijama otvorenog koda, kao što su
 Python, Sphinx, Docker i Fabric. Izvorni kod ovog dela dostupan je na

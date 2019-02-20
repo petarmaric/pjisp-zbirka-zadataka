@@ -13,7 +13,7 @@ Instructions for ACS students
 If you just want to read this book you can either buy its printed edition or
 `access it online for free`_.
 
-.. _`access it online for free`: http://pjisp.petarmaric.com/zbirka
+.. _`access it online for free`: http://pjisp.petarmaric.com/zbirka-zadataka
 
 
 Installation
