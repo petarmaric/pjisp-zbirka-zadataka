@@ -5,3 +5,4 @@ _build/
 TODO.rst
 *.pyc
 *.swp
+.vscode/
