@@ -2,8 +2,8 @@
    Statičke strukture ; Niz
 
 
-Zadatak "Vrednost veće od srednje"
-==================================
+Zadatak "Vrednosti veće od srednje"
+===================================
 
 .. sectionauthor:: Srđan Popov <srdjanpopov@uns.ac.rs>
 
