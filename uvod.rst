@@ -11,5 +11,5 @@ http://pjisp.petarmaric.com/zbirka-zadataka.
 
 Ovo delo je u celosti bazirano na tehnologijama otvorenog koda, kao što su
 Python, Sphinx, Docker i Fabric. Izvorni kod ovog dela dostupan je na
-https://bitbucket.org/petar/pjisp-zbirka-zadataka/ pod licencom otvorenog koda,
+https://github.com/petarmaric/pjisp-zbirka-zadataka pod licencom otvorenog koda,
 pogledati glavu :doc:`LICENSE` za detaljne informacije o uslovima licence.

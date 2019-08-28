@@ -22,7 +22,7 @@ Installation
 This project doesn't require system wide installation, just clone its repository
 to get started::
 
-    $ hg clone ssh://hg@bitbucket.org/petar/pjisp-zbirka-zadataka
+    $ git clone https://github.com/petarmaric/pjisp-zbirka-zadataka.git
     $ cd pjisp-zbirka-zadataka
     $ pipenv install
 
@@ -59,6 +59,6 @@ If you find any bugs, or wish to propose new features `please let us know`_.
 If you'd like to contribute, simply fork `the repository`_, commit your changes
 and send a pull request. Make sure you add yourself to `CONTRIBUTORS`_.
 
-.. _`please let us know`: https://bitbucket.org/petar/pjisp-zbirka-zadataka/issues/new
-.. _`the repository`: http://bitbucket.org/petar/pjisp-zbirka-zadataka
-.. _`CONTRIBUTORS`: https://bitbucket.org/petar/pjisp-zbirka-zadataka/src/default/CONTRIBUTORS
+.. _`please let us know`: https://github.com/petarmaric/pjisp-zbirka-zadataka/issues/new
+.. _`the repository`: https://github.com/petarmaric/pjisp-zbirka-zadataka
+.. _`CONTRIBUTORS`: https://github.com/petarmaric/pjisp-zbirka-zadataka/blob/master/AUTHORS
