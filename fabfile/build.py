@@ -14,6 +14,10 @@ SPHINX_BUILDERS = [
     'text',
 ]
 
+TRANSLATION_OVERRIDES = {
+    'Section author: ': 'Autor zadatka: ',
+}
+
 
 @task
 def clean():
@@ -41,15 +45,25 @@ def build_books():
 
     print 'Building books...'
     env.is_miktex = is_miktex()
-    
+
     base_dir = os.getcwd()
     os.chdir(os.path.join(SPHINX_BUILD_DIR, 'latex'))
     for filename in fnmatch.filter(os.listdir('.'), '*.tex'):
+        # quickfix until Sphinx is fully translated into Serbian
+        with open(filename, 'r+') as fp:
+            buff = fp.read()
+            for search, replace in TRANSLATION_OVERRIDES.items():
+                buff = buff.replace(search, replace)
+
+            fp.seek(0)
+            fp.truncate()
+            fp.write(buff)
+
         pdflatex(filename)
         makeindex(filename)
         pdflatex(filename)
         pdflatex(filename)
-    
+
     os.chdir(base_dir)
     print "Build finished; the PDF files are in %s." % os.path.join(SPHINX_BUILD_DIR, 'latex')
 
