@@ -1,16 +1,7 @@
-.. warning::
-
-   Ovo je samo primer teksta zadatka, ne zaboravite da izmenite:
-
-   - ``zadaci/sa-kolokvijuma/2020/EM/T34/G1/zadatak.rst``
-   - ``zadaci/sa-kolokvijuma/2020/EM/T34/G1/resenje.c``
-
-
-
-
-
 Iz zadate ulazne datoteka učitati statički niz struktura,
 pri čemu se struktura ``pacijent_st`` sastoji od sledećih polja:
+
+**You should replace this file contents with your assignment text**
 
 - Ime (jedna reč, do 20 karaktera)
 - Prezime (jedna reč, do 20 karaktera)

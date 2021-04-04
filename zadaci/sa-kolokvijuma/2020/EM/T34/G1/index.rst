@@ -1,18 +1,9 @@
+.. You should also update the assignment index
+
 .. index::
-   666999 ; Nekog je mrzelo da azurira svoje kategorije :(
-   Algoritmi ; Numerika
    Algoritmi ; Pretraga
-   Algoritmi ; Sortiranje
-   Datoteke ; Binarne
    Datoteke ; Tekstualne
-   Dinamičke strukture ; Dinamički niz
-   Dinamičke strukture ; Lista
-   Dinamičke strukture ; Stablo
-   Dinamičke strukture ; Stek
-   Dinamičke strukture ; Red
-   Statičke strukture ; Matrica
    Statičke strukture ; Niz
-   Statičke strukture ; String
 
 
 Zadatak "Contribution workflow example"

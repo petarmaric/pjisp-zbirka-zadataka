@@ -1,1 +1,7 @@
-// TODO: Molim izmenite 'zadaci/sa-kolokvijuma/2020/EM/T34/G1/resenje.c'
+#include <stdio.h>
+
+int main() {
+    puts("You should replace this file contents with your TESTED solution");
+
+    return 0;
+}
