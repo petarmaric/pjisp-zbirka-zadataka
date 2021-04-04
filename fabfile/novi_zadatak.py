@@ -14,7 +14,11 @@ MAX_GRUPA = 9
 MAX_GRUPA_STARI_STUDENTI = 4
 VALID_GRUPE = ["G%d" % x for x in xrange(1, MAX_GRUPA+1)] + \
               ["S%d" % x for x in xrange(1, MAX_GRUPA_STARI_STUDENTI+1)]
-AUTHORS_LIST = [line.strip() for line in codecs.open('AUTHORS', 'r', 'utf-8')]
+AUTHORS_LIST = [
+    line.strip()
+    for filename in ['AUTHORS', 'CONTRIBUTORS']
+    for line in codecs.open(filename, 'r', 'utf-8')
+]
 
 ZADACI_BASE_DIR = 'zadaci'
 ZADACI_SA_KOLOKVIJUMA_DIR = os.path.join(ZADACI_BASE_DIR, 'sa-kolokvijuma')

@@ -32,7 +32,7 @@ Quick start
 
 Show help::
 
-    $ pipenv run fab
+    $ pipenv run fab help
 
 You can also run the following command to automatically (re)build the book
 whenever its files are updated::
@@ -42,13 +42,32 @@ whenever its files are updated::
 Using Docker
 ------------
 
-Build the Docker image::
+If you do not wish to install a LaTeX distribution on your system you can build
+your local Docker image::
 
     $ docker build --tag petarmaric/pjisp-zbirka-zadataka .
 
-Show help::
+and then use the dockerized version instead::
 
-    $ docker run --rm -it --user="$(id -u):$(id -g)" --net=none --volume="$PWD":/app petarmaric/pjisp-zbirka-zadataka
+    $ ./dockerized.sh help
+    [pjisp.petarmaric.com] Executing task 'help'
+    Pregled korisnih Fabric komandi:
+
+    * 'build'                         kompajlira celokupnu knjigu (u svim podrzanim formatima)
+    * 'novi_zadatak.sa_kolokvijuma'   dodaje novi zadatak sa kolokvijuma
+
+    Available commands:
+
+        help
+        build
+        build.build_books
+        build.clean
+        build.lint
+        build.rebuild_all
+        build.sphinx_build
+        novi_zadatak.sa_kolokvijuma
+        publish
+        publish.html
 
 
 Contribute
@@ -56,9 +75,9 @@ Contribute
 
 If you find any bugs, or wish to propose new features `please let us know`_.
 
-If you'd like to contribute, simply fork `the repository`_, commit your changes
-and send a pull request. Make sure you add yourself to `CONTRIBUTORS`_.
+If you'd like to contribute, simply fork `the repository`_, add yourself to
+``CONTRIBUTORS`` (following the same format as used in ``AUTHORS``), commit
+your changes and send a pull request.
 
 .. _`please let us know`: https://github.com/petarmaric/pjisp-zbirka-zadataka/issues/new
 .. _`the repository`: https://github.com/petarmaric/pjisp-zbirka-zadataka
-.. _`CONTRIBUTORS`: https://github.com/petarmaric/pjisp-zbirka-zadataka/blob/master/AUTHORS

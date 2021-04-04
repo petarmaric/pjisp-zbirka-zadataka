@@ -1,8 +1,8 @@
 """\
-Pregled korisnih komandi:
+Pregled korisnih Fabric komandi:
 
-* 'fab build'                         kompajlira celokupnu knjigu (u svim podrzanim formatima)
-* 'fab novi_zadatak.sa_kolokvijuma'   dodaje novi zadatak sa kolokvijuma
+* 'build'                         kompajlira celokupnu knjigu (u svim podrzanim formatima)
+* 'novi_zadatak.sa_kolokvijuma'   dodaje novi zadatak sa kolokvijuma
 """
 
 from fabric.api import task
