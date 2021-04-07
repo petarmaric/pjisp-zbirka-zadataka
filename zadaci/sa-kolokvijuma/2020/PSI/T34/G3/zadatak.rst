@@ -1,7 +1,3 @@
-=======================
-Rezultat društvene igre
-=======================
-
 Napraviti program za vođenje evidencije bodova za društvene igre.
 Igrači su predstavljeni na sledeći način:
 
