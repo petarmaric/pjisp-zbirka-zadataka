@@ -1,7 +1,3 @@
-====================
-Temperatura u zgradi
-====================
-
 Temperatura u zgradi merena je na više različitih mesta ujutru, u podne i uveče.
 U ulaznom fajlu ``merenja.txt`` redom su navedeni deo zgrade i tri merenja sprovedena tokom jednog dana.
 Merenja su predstavljena na sledeći način:
