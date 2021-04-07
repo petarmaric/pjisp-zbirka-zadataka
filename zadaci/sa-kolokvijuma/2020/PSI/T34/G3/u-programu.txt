@@ -1,0 +1,14 @@
+Igrac 1: Laza
+Igrac 2: Mika
+
+Partija 1
+Igrac Laza: 3
+Igrac Mika: 5
+
+Partija 2
+Igrac Laza: 7
+Igrac Mika: 4
+
+Partija 3
+Igrac Laza: 2
+Igrac Mika: 5
