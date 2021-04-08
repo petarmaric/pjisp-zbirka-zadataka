@@ -1,0 +1,7 @@
+Ulaz 3.2
+Hodnik 5.3
+Kotlarnica 38.1
+Prostorija 22.1
+Ostava 17.0
+
+Najveca prosecna temperatura u zgradi je 38.1 stepeni.
