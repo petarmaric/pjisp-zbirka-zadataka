@@ -18,14 +18,15 @@ prošli u sledeći krug.
 
 Primer poziva:
 
-  .. code:: bash
+.. code:: bash
 
-     ./program timovi.txt 13.5
+   ./program timovi.txt 13.5
 
 sa zadatim ulazom u datoteci ``timovi.txt``:
 
-  .. literalinclude:: timovi.txt
+.. literalinclude:: timovi.txt
+
 
 i očekivanim izlazom na terminalu:
 
-  .. literalinclude:: izlaz.txt
+.. literalinclude:: izlaz.txt

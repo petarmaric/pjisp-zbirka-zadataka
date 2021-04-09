@@ -3,7 +3,7 @@
    Statičke strukture ; Niz
 
 
-Zadatak "Kulinarsko takmicenje"
+Zadatak "Kulinarsko takmičenje"
 =================================
 
 .. sectionauthor:: Milena Počuča <milenapocuca@uns.ac.rs>

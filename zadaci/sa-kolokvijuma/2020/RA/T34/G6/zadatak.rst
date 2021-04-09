@@ -29,15 +29,15 @@ servisiranja uklapa u budžet vlasnika.
 
 Primer poziva:
 
-  .. code:: bash
+.. code:: bash
 
-    ./program automobili.txt
+  ./program automobili.txt
 
 sa zadatim ulazom u datoteci ``automobili.txt``:
 
-  .. literalinclude:: automobili.txt
+.. literalinclude:: automobili.txt
 
 
 i očekivanim izlazom na terminalu:
 
-  .. literalinclude:: izlaz.txt
+.. literalinclude:: izlaz.txt
