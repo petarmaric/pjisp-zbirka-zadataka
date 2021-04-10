@@ -1,45 +1,48 @@
 Iz zadate ulazne datoteke učitati podatke u jednostruko spregnutu listu, gde
-struktura ``obrok_st`` sadrži sledeća polja:
+struktura ``igrica_st`` sadrži sledeća polja:
 
-- naziv obroka (jedna reč, do 20 karaktera)
-- vrsta obroka (jedna reč, do 20 karaktera)
-- gramaža po obroku
-- broj kalorija na 100g
+- naziv igre (jedna reč, do 20 karaktera)
+- pozicija na rang listi (pozitivan ceo broj)
+- da li je igra podržana na Windows operativnom sistemu (tačno jedaj karakter, + ako jeste, - ako nije)
+- da li je igra podržana na MacOS operativnom sistemu (tačno jedaj karakter, + ako jeste, - ako nije)
+- da li je igra podržana na Linux operativnom sistemu (tačno jedaj karakter, + ako jeste, - ako nije)
 
-Naravno, struktura ``obrok_st`` sadrži i polja potrebna za pravilno
+Naravno, struktura ``igrica_st`` sadrži i polja potrebna za pravilno
 formiranje jednostruko spregnute liste.
 
-Na osnovu zadate vrste obroka ``vrsta`` iz formirane liste
-ispisati na standardni izlaz sve obroke koji pripadaju toj vrsti
-u sledećem rasporedu polja strukture ``obrok_st``:
+Igre ispisati na standardni izlaz sortirane po poziciji na rang listi (sortirati prilikom učitavanja u listu) u sledećem formatu:
 
-- naziv obroka
-- gramaža po obroku
-- broj kalorija na 100g
+- pozicija na rang listi
+- naziv igre
 
-i potom ispisati informaciju o obroku izabrane vrste koji ima najmanje kalorija
-(broj kalorija po obroku se računa kao proizvod gramaže i broja kalorija na 100 grama podeljenog sa 100).
+i potom ispisati na kojim operativnim sistemima je podržana najbolje rangirana igra.
 
 Primer poziva programa::
 
-    ./a.out dezert obroci.txt
+    ./a.out igre.txt
 
-sa ``vrsta=dezert`` i zadatim ulazom u datoteci ``obroci.txt``::
+sa zadatim ulazom u datoteci ``igre.txt``::
 
-    sarma glavno_jelo 250 126
-    ruska_salata prilog 50 113
-    supa predjelo 130 40
-    prasetina glavno_jelo 250 345
-    baklava dezert 60 420
-    krompir_salata prilog 80 82
-    bajadera dezert 68 440
-    jagnjetina glavno_jelo 250 318
-    cokoladna_torta dezert 80 490
+    Phasmophobia 4 + - -
+    Rust 1 + + -
+    Hades 7 + + -
+    Cyberpunk2077 3 + - -
+    AmongUs 8 + - -
+    Raft 5 + - -
+    SeaOfThieves 6 + - -
+    Counter-Strike 2 + + +
 
-i očekivanim ispisom na standardnom izlazu::
+i očekivanim ispisom na standardnom izlazu ::
 
-    baklava 60 420
-    bajadera 68 440
-    cokoladna_torta 80 490
+    1 Rust
+    2 Counter-Strike
+    3 Cyberpunk2077
+    4 Phasmophobia
+    5 Raft
+    6 SeaOfThieves
+    7 Hades
+    8 AmongUs
 
-    Obrok sa najmanje kalorija je baklava sa ukupno 252 kalorija.
+    Najbolje rangirana igra je Rust i podrzana je na sledecim operativnim sistemima:
+    Windows
+    MacOS

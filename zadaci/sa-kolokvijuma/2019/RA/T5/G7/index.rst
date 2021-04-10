@@ -5,8 +5,8 @@
    Dinamičke strukture ; Lista
 
 
-{% block pun_naziv %}Zadatak "Novogodišnji ukrasi"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Novogodišnji ukrasi"
+=============================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 

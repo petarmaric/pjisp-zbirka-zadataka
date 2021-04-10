@@ -4,8 +4,8 @@
    Dinamičke strukture ; Niz
 
 
-{% block pun_naziv %}Zadatak "Kafa pred ispit?"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Kafa pred ispit?"
+==========================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 

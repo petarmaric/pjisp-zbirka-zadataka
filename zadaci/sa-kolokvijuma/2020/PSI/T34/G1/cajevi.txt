@@ -1,0 +1,4 @@
+Zeleni 12 75
+Crni 40 125
+Beli 6 75
+Biljni 0 2

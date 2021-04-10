@@ -5,8 +5,8 @@
    Dinamičke strukture ; Stablo
 
 
-{% block pun_naziv %}Zadatak "Chocolate brownie"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Chocolate brownie"
+===========================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 

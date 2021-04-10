@@ -4,8 +4,8 @@
    Dinamičke strukture ; Lista
 
 
-{% block pun_naziv %}Zadatak "Dijeta u vreme praznikaa"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Steam top sellers lista"
+=================================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 

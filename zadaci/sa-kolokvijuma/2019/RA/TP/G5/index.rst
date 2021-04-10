@@ -5,8 +5,8 @@
    Dinamičke strukture ; Stablo
 
 
-{% block pun_naziv %}Zadatak "Bang for buck"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Bang for buck"
+=======================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 

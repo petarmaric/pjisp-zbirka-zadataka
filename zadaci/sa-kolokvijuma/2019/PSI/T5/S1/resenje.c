@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 30+1
+#define MAX 30 + 1
 
-typedef struct slatkis_st {
+typedef struct slatkis_st
+{
     char naziv[MAX];
     double secer;
     unsigned gramaza;
@@ -13,12 +14,15 @@ typedef struct slatkis_st {
     struct slatkis_st *next;
 } SLATKIS;
 
-void init_list(SLATKIS **head) {
+void init_list(SLATKIS **head)
+{
     *head = NULL;
 }
 
-void add_to_list(SLATKIS *new, SLATKIS **head) {
-    if(*head == NULL) { // list is empty
+void add_to_list(SLATKIS *new, SLATKIS **head)
+{
+    if (*head == NULL)
+    { // list is empty
         *head = new;
         return;
     }
@@ -26,9 +30,15 @@ void add_to_list(SLATKIS *new, SLATKIS **head) {
     add_to_list(new, &((*head)->next));
 }
 
-SLATKIS *create_new_item(char naziv[], double secer, unsigned gramaza, char vrsta[]) {
+SLATKIS *create_new_item(
+    char naziv[],
+    double secer,
+    unsigned gramaza,
+    char vrsta[])
+{
     SLATKIS *new = (SLATKIS *)malloc(sizeof(SLATKIS));
-    if (new == NULL) {
+    if (new == NULL)
+    {
         printf("Not enough RAM!\n");
         exit(21);
     }
@@ -43,64 +53,81 @@ SLATKIS *create_new_item(char naziv[], double secer, unsigned gramaza, char vrst
     return new;
 }
 
-void read_list_from(FILE *in, SLATKIS **head) {
+void read_list_from(FILE *in, SLATKIS **head)
+{
     char naziv[MAX];
     double secer;
     unsigned gramaza;
     char vrsta[MAX];
 
-    while(fscanf(in, "%s %lf %u %s", naziv, &secer, &gramaza, vrsta) != EOF) {
+    while (fscanf(in, "%s %lf %u %s", naziv, &secer, &gramaza, vrsta) != EOF)
+    {
         SLATKIS *new = create_new_item(naziv, secer, gramaza, vrsta);
         add_to_list(new, head);
     }
 }
 
-void save_item_to(FILE *out, SLATKIS *x) {
+void save_item_to(FILE *out, SLATKIS *x)
+{
     fprintf(
         out, "%s %u %.2lf\n",
-        x->naziv, x->gramaza, x->secer
-    );
+        x->naziv, x->gramaza, x->secer);
 }
 
-void save_list_to(FILE *out, SLATKIS *head, char vrsta[]) {
-    if(head != NULL) {
-        if(strcmp(head->vrsta, vrsta) == 0) {
+void save_list_to(FILE *out, SLATKIS *head, char vrsta[])
+{
+    if (head != NULL)
+    {
+        if (strcmp(head->vrsta, vrsta) == 0)
+        {
             save_item_to(out, head);
         }
         save_list_to(out, head->next, vrsta);
     }
 }
 
-void destroy_list(SLATKIS **head) {
-    if(*head != NULL) {
+void destroy_list(SLATKIS **head)
+{
+    if (*head != NULL)
+    {
         destroy_list(&((*head)->next));
         free(*head);
         *head = NULL;
     }
 }
 
-FILE *safe_fopen(char *filename, char *mode, int error_code) {
+FILE *safe_fopen(char *filename, char *mode, int error_code)
+{
     FILE *fp = fopen(filename, mode);
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         printf("Can't open '%s'!\n", filename);
         exit(error_code);
     }
     return fp;
 }
 
-SLATKIS* get_najsladji_SLATKIS(SLATKIS *head, char vrsta[]) {
-    if (head == NULL) { // list is empty
+SLATKIS *get_najsladji_SLATKIS(SLATKIS *head, char vrsta[])
+{
+    if (head == NULL)
+    { // list is empty
         return NULL;
     }
 
     SLATKIS *best = NULL;
-    while(head != NULL) {
-        if (strcmp(head->vrsta, vrsta) == 0) {
+    while (head != NULL)
+    {
+        if (strcmp(head->vrsta, vrsta) == 0)
+        {
             // Gledamo samo namirnice koje su odgovarajuce vrste
-            if (best == NULL) {
+            if (best == NULL)
+            {
                 // Pre ovoga nije bilo SLATKISA koji su odgovarajuce vrste
                 best = head;
-            } else if(head->gramaza*head->secer/100 > best->gramaza*best->secer/100) {
+            }
+            else if (head->gramaza * head->secer / 100 >
+                     best->gramaza * best->secer / 100)
+            {
                 // Nadjen bolji SLATKIS, koji je odgovarajuce vrste
                 best = head;
             }
@@ -112,8 +139,10 @@ SLATKIS* get_najsladji_SLATKIS(SLATKIS *head, char vrsta[]) {
     return best;
 }
 
-int main(int arg_num, char *args[]) {
-    if (arg_num != 4) {
+int main(int arg_num, char *args[])
+{
+    if (arg_num != 4)
+    {
         printf("USAGE: %s VRSTA IN_FILENAME OUT_FILENAME\n", args[0]);
         exit(11);
     }
@@ -122,7 +151,7 @@ int main(int arg_num, char *args[]) {
     char *in_filename = args[2];
     char *out_filename = args[3];
 
-    FILE *in  = safe_fopen(in_filename,  "r", 1);
+    FILE *in = safe_fopen(in_filename, "r", 1);
     FILE *out = safe_fopen(out_filename, "w", 2);
 
     SLATKIS *head;
@@ -132,9 +161,11 @@ int main(int arg_num, char *args[]) {
     save_list_to(out, head, vrsta);
 
     SLATKIS *best = get_najsladji_SLATKIS(head, vrsta);
-    if (best != NULL) {
+    if (best != NULL)
+    {
         fprintf(out, "\nSlatkis sa najvise secera je: %s", best->naziv);
-        fprintf(out, "\nKolicina secera je: %.2lf\n", best->gramaza*best->secer/100);
+        fprintf(out, "\nKolicina secera je: %.2lf\n",
+                best->gramaza * best->secer / 100);
     }
 
     destroy_list(&head);

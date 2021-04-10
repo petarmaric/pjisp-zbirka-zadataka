@@ -1,0 +1,8 @@
+Phasmophobia 4 + - -
+Rust 1 + + -
+Hades 7 + + -
+Cyberpunk2077 3 + - -
+AmongUs 8 + - -
+Raft 5 + - -
+SeaOfThieves 6 + - -
+Counter-Strike 2 + + +

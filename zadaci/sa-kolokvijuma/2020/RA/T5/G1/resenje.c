@@ -2,134 +2,174 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 20+1
+#define MAX_NAZIV 20 + 1
 
-typedef struct obrok_st {
-    char naziv[MAX];
-    char vrsta[MAX];
-    unsigned gramaza;
-    unsigned kalorije;
+typedef struct igra_st
+{
+    char naziv[MAX_NAZIV];
+    unsigned rang;
+    char windows;
+    char macos;
+    char lin;
 
-    struct obrok_st *next;
-} OBROK;
+    struct igra_st *next;
+} IGRA;
 
-void init_list(OBROK **head) {
+void init_list(IGRA **head)
+{
     *head = NULL;
 }
 
-void add_to_list(OBROK *new, OBROK **head) {
-    if(*head == NULL) { // list is empty
+void add_to_list_sorted(IGRA *new, IGRA **head)
+{
+    if (*head == NULL)
+    {
         *head = new;
         return;
     }
+    else if ((*head)->rang > new->rang)
+    {
+        new->next = *head;
+        *head = new;
+        return;
+    }
+    IGRA *pom = *head;
 
-    add_to_list(new, &((*head)->next));
+    while (pom->next != NULL && pom->next->rang < new->rang)
+    {
+        pom = pom->next;
+    }
+    new->next = pom->next;
+    pom->next = new;
 }
 
-OBROK *create_new_item(char naziv[], unsigned gramaza, unsigned kalorije, char vrsta[]) {
-    OBROK *new = (OBROK *)malloc(sizeof(OBROK));
-    if (new == NULL) {
+IGRA *create_new_item(
+    char naziv[],
+    unsigned rang,
+    char windows,
+    char macos,
+    char lin)
+{
+    IGRA *new = (IGRA *)malloc(sizeof(IGRA));
+    if (new == NULL)
+    {
         printf("Not enough RAM!\n");
         exit(21);
     }
 
     strcpy(new->naziv, naziv);
-    new->gramaza = gramaza;
-    new->kalorije = kalorije;
-    strcpy(new->vrsta, vrsta);
+    new->rang = rang;
+    new->windows = windows;
+    new->macos = macos;
+    new->lin = lin;
 
     new->next = NULL;
 
     return new;
 }
 
-void read_list_from(FILE *in, OBROK **head) {
-    char naziv[MAX];
-    unsigned gramaza;
-    unsigned kalorije;
-    char vrsta[MAX];
+void read_list_from(FILE *in, IGRA **head)
+{
+    char naziv[MAX_NAZIV];
+    unsigned rang;
+    char windows;
+    char macos;
+    char lin;
 
-    while(fscanf(in, "%s %s %u %u", naziv, vrsta, &gramaza, &kalorije) != EOF) {
-        OBROK *new = create_new_item(naziv, gramaza, kalorije, vrsta);
-        add_to_list(new, head);
+    while (
+        fscanf(
+            in,
+            "%s %u %c %c %c",
+            naziv,
+            &rang,
+            &windows,
+            &macos,
+            &lin) != EOF)
+    {
+        IGRA *new = create_new_item(naziv, rang, windows, macos, lin);
+        add_to_list_sorted(new, head);
     }
 }
 
-void save_item(OBROK *x, char* vrsta) {
-    if(strcmp(vrsta, x->vrsta) == 0){
-        printf(
-            "%s %u %u\n",
-            x->naziv, x->gramaza, x->kalorije
-        );
+void print_item(IGRA *x)
+{
+    printf(
+        "%u %s\n",
+        x->rang, x->naziv);
+}
+
+void print_list(IGRA *head)
+{
+    if (head != NULL)
+    {
+        print_item(head);
+        print_list(head->next);
     }
 }
 
-void save_list(OBROK *head, char* vrsta) {
-    if(head != NULL) {
-        save_item(head, vrsta);
-        save_list(head->next, vrsta);
-    }
-}
-
-void destroy_list(OBROK **head) {
-    if(*head != NULL) {
+void destroy_list(IGRA **head)
+{
+    if (*head != NULL)
+    {
         destroy_list(&((*head)->next));
         free(*head);
         *head = NULL;
     }
 }
 
-FILE *safe_fopen(char *filename, char *mode, int error_code) {
+FILE *safe_fopen(char *filename, char *mode, int error_code)
+{
     FILE *fp = fopen(filename, mode);
-    if (fp == NULL) {
+    if (fp == NULL)
+    {
         printf("Can't open '%s'!\n", filename);
         exit(error_code);
     }
     return fp;
 }
 
-OBROK *get_najbolja_OBROK(OBROK *head, char vrsta[]) {
-    if (head == NULL) {
-        return NULL;
+void print_najbolja_IGRA(IGRA *head)
+{
+    if (head == NULL)
+    {
+        return;
     }
 
-    OBROK *best = NULL;
-    while(head != NULL) {
-        if (strcmp(head->vrsta, vrsta) == 0) {
-            if (best == NULL) {
-                best = head;
-            } else if (head->gramaza * head->kalorije / 100 < best->gramaza * best->kalorije / 100) {
-                best = head;
-            }
-        }
-
-        head = head->next;
+    printf("\nNajbolje rangirana igra je %s ", head->naziv);
+    printf("i podrzana je na sledecim operativnim sistemima:\n");
+    if (head->windows == '+')
+    {
+        printf("Windows\n");
     }
-
-    return best;
+    if (head->macos == '+')
+    {
+        printf("MacOS\n");
+    }
+    if (head->lin == '+')
+    {
+        printf("Linux\n");
+    }
 }
 
-int main(int arg_num, char *args[]) {
-    if (arg_num != 3) {
-        printf("USAGE: %s VRSTA IN_FILENAME\n", args[0]);
+int main(int arg_num, char *args[])
+{
+    if (arg_num != 2)
+    {
+        printf("USAGE: %s IN_FILENAME\n", args[0]);
         exit(11);
     }
 
-    char *vrsta = args[1];
-    char *in_filename = args[2];
+    char *in_filename = args[1];
 
-    FILE *in  = safe_fopen(in_filename,  "r", 1);
+    FILE *in = safe_fopen(in_filename, "r", 1);
 
-    OBROK *head;
+    IGRA *head;
     init_list(&head);
 
     read_list_from(in, &head);
-    save_list(head, vrsta);
+    print_list(head);
 
-    OBROK *best = get_najbolja_OBROK(head, vrsta);
-    if (best != NULL) {
-        printf("\nObrok sa najmanje kalorija je %s sa ukupno %d kalorija.\n", best->naziv, best->gramaza * best->kalorije / 100);
-    }
+    print_najbolja_IGRA(head);
 
     destroy_list(&head);
 

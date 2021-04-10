@@ -1,11 +1,11 @@
 .. index::
    Algoritmi ; Pretraga
    Datoteke ; Tekstualne
-   Dinamičke strukture ; Lista
+   Statičke strukture ; Niz
 
 
-{% block pun_naziv %}Zadatak "Zimske čarolije"{% endblock %}
-{{ '=' * self.pun_naziv()|length }}
+Zadatak "Sezona skijanja"
+=========================
 
 .. sectionauthor:: Jelena Dokić <jelena.dokic@uns.ac.rs>
 
