@@ -1,0 +1,7 @@
+crna_cokolada   250    139.99   Menaz
+puter           250    120      Premia
+jaja            80     55       Danubius
+secer           250    12.8     C
+brasno          30     11.99    Danubius
+kakao           30     78       C
+so              2      15.66    Premia
