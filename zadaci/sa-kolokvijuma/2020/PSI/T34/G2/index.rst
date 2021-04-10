@@ -3,8 +3,8 @@
    Statičke strukture ; Niz
 
 
-Zadatak "Mobilni"
-=================================
+Zadatak "Povoljni mobilni telefoni"
+===================================
 
 .. sectionauthor:: Milica Milutinović <mmilutinovic@uns.ac.rs>
 
