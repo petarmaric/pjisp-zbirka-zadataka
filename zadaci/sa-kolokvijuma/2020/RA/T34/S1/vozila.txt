@@ -1,0 +1,7 @@
+Beograd zuta BG401-AA 1
+Beograd zuta BG123-EC 2 
+Kragujevac crvena KG001-OP 3 
+Beograd zelena BG217-EE 4
+Krusevac plava KS100-KV 10
+Beograd plava BG666-VR 4
+Beograd crvena BG711-QW 2
