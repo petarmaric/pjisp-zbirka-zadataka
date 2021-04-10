@@ -12,8 +12,8 @@ Na osnovu parametra ``odabrana_zemlja`` koji se prihvata preko standardnog
 ulaza, izračunati cenu pošiljke nakon carine na sledeći način:
 
 -  ako je vrednost pošiljke veća od 100 evra, težina veća od 1000 grama
-      i zemlja odgovara vrednosti unetog parametra *odabrana_zemlja*
-      tada visina cene odgovara visini vrednosti pošiljke uvećane za 18%
+   i zemlja odgovara vrednosti unetog parametra *odabrana_zemlja*
+   tada visina cene odgovara visini vrednosti pošiljke uvećane za 18%
 -  u suprotnom, visina cene odgovara visini vrednosti pošiljke.
 
 Preko standardnog ulaza korisnik treba da unese i parametar
