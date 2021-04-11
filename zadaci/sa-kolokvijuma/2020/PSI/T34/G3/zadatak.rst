@@ -11,17 +11,17 @@ b) Ispisati rezultate igre u izlazni fajl pod imenom ``bodovi.txt``.
 
 Primer poziva programa (``2`` predstavlja broj igrača, a ``3`` broj odigranih partija):
 
-  .. code:: bash
+.. code:: bash
 
-    ./bodovi 2 3
+  ./bodovi 2 3
 
 Primer rada programa:
 
-  .. literalinclude:: u-programu.txt
+.. literalinclude:: u-programu.txt
 
 Primer izlazne datoteke:
 
-  .. literalinclude:: bodovi.txt
+.. literalinclude:: bodovi.txt
 
 
 
