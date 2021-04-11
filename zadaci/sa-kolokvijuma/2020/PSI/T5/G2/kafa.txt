@@ -1,0 +1,9 @@
+Caffe_City  Espresso   105.00
+Caffe_City  Macchiato  135.00
+Caffe_City  Cappuccino 145.00
+Caffe_Solo  Espresso   140.00
+Caffe_Solo  Macchiato  150.00
+Caffe_Solo  Cappuccino 160.00
+Caffe_Style Espresso   173.00
+Caffe_Style Macchiato  195.00
+Caffe_Style Cappuccino 215.00
