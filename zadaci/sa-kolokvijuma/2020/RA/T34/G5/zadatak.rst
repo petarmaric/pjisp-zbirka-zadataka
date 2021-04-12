@@ -1,5 +1,5 @@
 Iz zadate ulazne datoteke učitatati statički niz struktura, pri čemu se struktura
-rođendan_st sastoji od sledećih polja:
+rodjendan_st sastoji od sledećih polja:
 
 - Ime (jedna reč, do 15 karaktera),
 - Dan rođenja (prirodan broj),
