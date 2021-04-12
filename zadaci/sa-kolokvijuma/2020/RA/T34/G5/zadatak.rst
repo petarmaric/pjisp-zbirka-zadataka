@@ -23,11 +23,11 @@ Primer poziva programa::
 
 Primer ispisa slavljenika (ako je rođen 5. 12.) ::
 
-    Srecan rođendan Nikola!
+    Srecan rodjendan Nikola!
 
 Primer ispisa slavljenika (ako je rođen 6. 12.) ::
 
-    Srećan rođendan Ana!
+    Srećan rodjendan Ana!
 
 Primer ispisa da li ima dovoljno torti ::
 
