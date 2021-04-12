@@ -1,0 +1,10 @@
+brasno 30 3.597
+crna_cokolada 250 349.975
+jaja 80 44.000
+kakao 30 23.400
+puter 250 300.000
+secer 250 32.000
+so 2 0.313
+
+Ukupna cena namirnica je: 753.285
+Namirnica sa najvecom gramazom proizvodjaca Premia je: puter

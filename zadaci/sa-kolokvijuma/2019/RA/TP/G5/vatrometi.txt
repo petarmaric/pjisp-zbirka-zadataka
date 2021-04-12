@@ -1,0 +1,7 @@
+Petarde             110 250
+Rakete              125 1200
+Rimska_sveca        80  350
+Cvrena_udovica      120 450
+Vulkan              70  590
+Baterija            120 2500
+Topovski_udar       130 1000
