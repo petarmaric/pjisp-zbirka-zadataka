@@ -1,21 +1,21 @@
 Iz zadate ulazne datoteke učitati podatke u jednostruko spregnutu listu, gde
 struktura ``cvecara_st`` sadrži sledeća polja:
 
-- naziv cvecare (jedna reč, do 20 karaktera)
-- vrste cveca (jedna reč, do 20 karaktera)
-- cena cveca (pozitivan realan broj)
+- naziv cvećare (jedna reč, do 20 karaktera)
+- vrste cveća (jedna reč, do 20 karaktera)
+- cena cveća (pozitivan realan broj)
 
 Naravno, struktura ``cvecara_st`` sadrži i polja potrebna za pravilno
 formiranje jednostruko spregnute liste.
 
-Na osnovu zadate vrste cveca ``vrsta_cveca`` iz formirane liste ispisati podatke na
+Na osnovu zadate vrste cveća ``vrsta_cveca`` iz formirane liste ispisati podatke na
 standardni izlaz (terminal), u sledećem rasporedu polja strukture ``cvecara_st``:
 
 - cena (zaokružena na 2 decimale, koristiti "%6.2f" format specifikator)
-- naziv vrste cveca
-- naziv cvecare
+- naziv vrste cveća
+- naziv cvećare
 
-i potom na standardni izlaz (terminal) ispisati informaciju u kojoj cvecari je zadati cvet najpovoljniji i koja je njegova cena(zaokružena na 2 decimale).
+i potom na standardni izlaz (terminal) ispisati informaciju u kojoj cvećari je zadati cvet najpovoljniji i koja je njegova cena(zaokružena na 2 decimale).
 
 Primer poziva programa::
 

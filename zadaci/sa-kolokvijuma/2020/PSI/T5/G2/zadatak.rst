@@ -1,7 +1,7 @@
 Iz zadate ulazne datoteke učitati podatke u jednostruko spregnutu listu, gde
 struktura ``kafa_st`` sadrži sledeća polja:
 
-- naziv kafica (jedna reč, do 20 karaktera)
+- naziv kafića (jedna reč, do 20 karaktera)
 - vrsta kafe (jedna reč, do 20 karaktera)
 - cena kafe (pozitivan realan broj)
 
@@ -13,7 +13,7 @@ standardni izlaz (terminal), u sledećem rasporedu polja strukture ``kafa_st``:
 
 - cena (zaokružena na 2 decimale, koristiti "%6.2f" format specifikator)
 - naziv vrste kafe
-- naziv kafica
+- naziv kafića
 
 i potom u na standardni izlaz ispisati informaciju koja je prosečna cena zadate vrste kafe (zaokružena na 2 decimale, koristiti "%6.2f" format specifikator).
 

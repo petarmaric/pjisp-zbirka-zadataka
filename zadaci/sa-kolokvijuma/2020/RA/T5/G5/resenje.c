@@ -30,7 +30,7 @@ int main(int BrArg, char **argv)
     exit(EXIT_FAILURE);
   }
 
-  char cvecara[21];
+  char cvecara[MAX_CVECARA];
   char *vrsta_cveca = argv[1];
   FILE *in = safe_fopen(argv[2], "r");
 
