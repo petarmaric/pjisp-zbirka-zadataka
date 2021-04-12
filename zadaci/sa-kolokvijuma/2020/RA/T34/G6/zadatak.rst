@@ -1,7 +1,6 @@
 Iz zadate ulazne datoteke automobili.txt učitati statički niz struktura, 
 pri čemu se struktura ``automobil_st`` sastoji od sledećih polja:
 
-- marka (jedna reč, do 20 karaktera)
 - model (jedna reč, do 20 karaktera)
 - vrsta servisa (jedna reč, do 20 karaktera)
 - kubikaža (prirodan broj)
@@ -11,7 +10,7 @@ Vrsta servisa koji je potreban za automobil može biti MALI ili VELIKI.
 Budžet vlasnika predstavlja količinu novca koju je je vlasnik automobila
 spreman da izdvoji za željeni servis.
 
-Stvarna cena servisiranja automobile zavisi od vrste servisa i 
+Stvarna cena servisiranja automobila zavisi od vrste servisa i 
 od kubikaže automobila. Cena servisiranja data je u tabeli ispod:
 
 +---------------------+--------------------+----------------------+
