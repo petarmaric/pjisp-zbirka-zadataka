@@ -30,6 +30,9 @@ jobs:
       - name: Install pipenv
         run: pip install --user pipenv
 
+      - name: Install dependencies in virtualenv by using pipenv
+        run: pipenv install
+
       - name: Build zbirka
         run: pipenv run fab build
 
