@@ -15,16 +15,16 @@ b) Pronaći deo zgrade sa maksimalnom vrednošću prosečne temperature i ispisa
 
 Primer ulazne datoteke:
 
-  .. literalinclude:: merenja.txt
+.. literalinclude:: merenja.txt
 
 Primer ispisa programa:
 
-  .. literalinclude:: ispis.txt
+.. literalinclude:: ispis.txt
 
 Primer poziva programa:
 
-  .. code:: bash
+.. code:: bash
 
-    ./temperatura merenja.txt
+  ./temperatura merenja.txt
 
 
