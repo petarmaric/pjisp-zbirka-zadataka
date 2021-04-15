@@ -35,7 +35,7 @@ jobs:
 
       # Uploads slides as an artifact (Available for download in job Summary)
       - name: Make artifacts available for download
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: Slides
           path: |
