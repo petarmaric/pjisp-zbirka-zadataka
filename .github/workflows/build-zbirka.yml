@@ -1,0 +1,44 @@
+
+name: Build Zbirka
+
+on:
+  # Triggers the workflow on push or pull request events for all branches
+  push:
+    branches: '**'
+  pull_request:
+    branches: '**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install pipenv
+        run: pip install --user pipenv
+
+      - name: Build zbirka
+        run: pipenv run fab build
+
+      # Uploads slides as an artifact (Available for download in job Summary)
+      - name: Make artifacts available for download
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Slides
+          path: |
+            ./_build/html/
+            ./_build/latex/zbirka.pdf
+
