@@ -43,11 +43,11 @@ jobs:
       - name: Build zbirka
         run: pipenv run fab build
 
-      # Uploads slides as an artifact (Available for download in job Summary)
+      # Uploads HTML and PDF as an artifact (Available for download in job Summary)
       - name: Make artifacts available for download
         uses: actions/upload-artifact@v2
         with:
-          name: Slides
+          name: zbirka
           path: |
             ./_build/html/
             ./_build/latex/zbirka.pdf
