@@ -18,6 +18,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install Latex dependencies
+        run: |
+          apt install -y texlive-latex-base
+          apt install -y texlive-fonts-recommended
+          apt install -y texlive-fonts-extra
+          apt install -y texlive-latex-extra
+
       - name: Setup Python 3
         uses: actions/setup-python@v2
         with:
