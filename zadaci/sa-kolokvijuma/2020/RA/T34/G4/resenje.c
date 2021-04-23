@@ -7,7 +7,7 @@
 #define MAX_SIFRA 5+1
 #define MAX_VREDNOST 4+1
 
-typedef struct posiljka
+typedef struct posiljka_st
 {
     char sifra[MAX_SIFRA];
     char zemlja[MAX_ZEMLJA];
@@ -66,7 +66,7 @@ void sortiraj(Posiljka *p, int n)
             }
 }
 
-void ispis(FILE *out, Posiljka *p, int n, int arg) 
+void ispis(FILE *out, Posiljka *p, int n) 
 {
     sortiraj(p,n);
     fprintf(out,"Cene posiljki nakon carinjenja:\n\n");
@@ -107,9 +107,9 @@ int main(int brojArgum, char **argumenti)
     }while(broj!=-1 && broj!=1);
 
     if(broj==-1)
-        ispis(stdout,p,n,broj);
+        ispis(stdout,p,n);
     else
-        ispis(out,p,n,broj);
+        ispis(out,p,n);
 
     fclose(in);
     fclose(out);
