@@ -18,30 +18,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Latex dependencies
-        run: |
-          sudo apt-get install -y texlive-latex-base
-          sudo apt-get install -y texlive-fonts-recommended
-          sudo apt-get install -y texlive-fonts-extra
-          sudo apt-get install -y texlive-latex-extra
-
-      - name: Setup Python 3
-        uses: actions/setup-python@v2
+      - name: Build artifacts
+        uses: jrubics/PJISP-zbirka-zadataka-action@v1
         with:
-          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-
-      - name: Upgrade pip
-        run: python -m pip install --upgrade pip
-
-      - name: Install pipenv
-        run: pip install --user pipenv
-
-      - name: Install dependencies in virtualenv by using pipenv
-        run: pipenv install
-
-      - name: Build zbirka
-        run: pipenv run fab build
+          command: build
 
       # Uploads HTML and PDF as an artifact (Available for download in job Summary)
       - name: Make artifacts available for download
