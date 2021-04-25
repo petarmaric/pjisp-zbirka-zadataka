@@ -1,0 +1,6 @@
+Tanjiri    DA 200.00
+Igracka    NE 200.00
+Stolica    NE 425.30
+Laptop     DA 400.00
+Sto        NE 475.35
+Monitor    DA 200.00
