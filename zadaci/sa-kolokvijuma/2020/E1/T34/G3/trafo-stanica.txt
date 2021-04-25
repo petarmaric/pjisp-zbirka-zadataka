@@ -1,0 +1,10 @@
+Dositejeva 1   1 kuca   NE
+Dositejeva 2  35 zgrada DA
+Dositejeva 3   1 kuca   NE
+Dositejeva 4  23 zgrada DA
+Dositejeva 5   1 kuca   DA
+Dositejeva 6   1 kuca   NE
+Temerinska 29  2 kuca   DA
+Temerinska 26  1 kuca   NE
+Temerinska 28  3 kuca   DA
+Temerinska 31 32 zgrada NE

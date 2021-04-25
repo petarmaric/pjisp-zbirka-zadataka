@@ -1,0 +1,9 @@
+Dositejeva  2 zgrada
+Dositejeva  4 zgrada
+Dositejeva  5 kuca
+Temerinska 29 kuca
+Temerinska 28 kuca
+
+Broj domacinstava bez struje: 64
+
+Moguc kvar trafo stanice!
