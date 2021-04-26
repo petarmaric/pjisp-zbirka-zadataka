@@ -9,21 +9,21 @@ Učitati pakete u jednostruko spregnutu listu (dodati novi element na kraj liste
 
 a) Izračunati cenu dostave paketa na osnovu sledećeg cenovnika:
 
-+-----------+------+
-| Masa [kg] | Cena |
-+===========+======+
-| 0-5       | 200  |
-+-----------+------+
-| 5-10      | 400  |
-+-----------+------+
-
-Ukoliko paket ima više od 10kg, dodatna masa paketa se naplaćuje pomnožena sa vrednošću argumenta komandne linije, koji predstavlja cenu po kilogramu.
+   +-----------+------+
+   | Masa [kg] | Cena |
+   +===========+======+
+   | 0-5       | 200  |
+   +-----------+------+
+   | 5-10      | 400  |
+   +-----------+------+
+   
+   Ukoliko paket ima više od 10kg, dodatna masa paketa se naplaćuje pomnožena sa vrednošću argumenta komandne linije, koji predstavlja cenu po kilogramu.
 
 b) Na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
 
-    * sadržaj (ispisano sa ``%-10s`` format specifikatorom)
-    * lomljivo (ispisano sa ``%2s`` format specifikatorom)
-    * cena (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
+   * sadržaj (ispisano sa ``%-10s`` format specifikatorom)
+   * lomljivo (ispisano sa ``%2s`` format specifikatorom)
+   * cena (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
 
 
 Primer ulazne datoteke:

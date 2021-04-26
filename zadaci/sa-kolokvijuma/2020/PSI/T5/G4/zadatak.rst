@@ -9,9 +9,9 @@ Za proizvode iz ulazne datoteke uraditi sledeće:
 a) Učitati proizvode u jednostruko spregnutu listu. Novi elementi dodaju se tako da lista bude sortirana po ceni u rastućem redosledu.
 b) Na osnovu argumenta komandne linije koji označava vrstu proizvoda, na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
 
-    * cena  (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
-    * naziv (ispisano sa ``%-12s`` format specifikatorom)
-    * vrsta (ispisano sa ``%s`` format specifikatorom)
+   * cena  (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
+   * naziv (ispisano sa ``%-12s`` format specifikatorom)
+   * vrsta (ispisano sa ``%s`` format specifikatorom)
 
 Ispisati da proizvodi ne postoje u slučaju da nijedan proizvod nije zadate vrste (pogledati primere ispisa programa).
 
