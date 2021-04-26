@@ -21,9 +21,9 @@ Ukoliko paket ima više od 10kg, dodatna masa paketa se naplaćuje pomnožena sa
 
 b) Na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
 
-* sadržaj (ispisano sa ``%-10s`` format specifikatorom)
-* lomljivo (ispisano sa ``%2s`` format specifikatorom)
-* cena (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
+    * sadržaj (ispisano sa ``%-10s`` format specifikatorom)
+    * lomljivo (ispisano sa ``%2s`` format specifikatorom)
+    * cena (zaokruženo na dve decimale, ispisano sa ``%6.2lf`` format specifikatorom)
 
 
 Primer ulazne datoteke:
