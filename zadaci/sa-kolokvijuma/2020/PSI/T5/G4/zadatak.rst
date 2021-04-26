@@ -17,25 +17,25 @@ Ispisati da proizvodi ne postoje u slučaju da nijedan proizvod nije zadate vrst
 
 Primer ulazne datoteke:
 
-  .. literalinclude:: proizvodi.txt
+.. literalinclude:: proizvodi.txt
 
 Primer ispisa programa za postojeću zadatu vrstu proizvoda:
 
-  .. literalinclude:: ispis-postoji-vrsta.txt
+.. literalinclude:: ispis-postoji-vrsta.txt
 
 Primer poziva programa za postojeću zadatu vrstu proizvoda:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-    ./proizvodi proizvodi.txt prehrambeni
+  ./proizvodi proizvodi.txt prehrambeni
 
 Primer ispisa programa za nepostojeću zadatu vrstu proizvoda:
 
-  .. literalinclude:: ispis-ne-postoji-vrsta.txt
+.. literalinclude:: ispis-ne-postoji-vrsta.txt
 
 Primer poziva programa za nepostojeću zadatu vrstu proizvoda:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     ./proizvodi proizvodi.txt odeca
+  ./proizvodi proizvodi.txt odeca
 

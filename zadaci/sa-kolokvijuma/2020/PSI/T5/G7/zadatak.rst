@@ -28,16 +28,15 @@ b) Na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
 
 Primer ulazne datoteke:
 
-  .. literalinclude:: paketi.txt
+.. literalinclude:: paketi.txt
 
 Primer ispisa programa:
 
-  .. literalinclude:: ispis.txt
+.. literalinclude:: ispis.txt
 
 Primer poziva programa:
 
-  .. code:: bash
+.. code:: bash
 
-    ./paketi paketi.txt 5.5
-
+  ./paketi paketi.txt 5.5
 
