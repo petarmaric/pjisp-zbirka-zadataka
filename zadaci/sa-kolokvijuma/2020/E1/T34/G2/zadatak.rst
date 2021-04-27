@@ -17,18 +17,10 @@ Primer poziva::
 
     ./suplementi suplementi.txt cene.txt
 
-sa zadatim ulazom u datoteci ``suplementi.txt``::
+sa zadatim ulazom u datoteci ``suplementi.txt``:
 
-    vitamin_c 40 2 344.99
-    cink 30 1 128.00
-    vitamin_d 60 3 899.99
-    B12 44 3 755.55
-    magnezijum 20 1 455.66
+.. literalinclude:: suplementi.txt
 
-i očekivanim izlazom u datoteci ``cene.txt``::
+i očekivanim izlazom u datoteci ``cene.txt``:
 
-    17.25 vitamin_c
-    4.27 cink
-    45.00 vitamin_d
-    51.51 B12
-    22.78 magnezijum
+.. literalinclude:: cene.txt

@@ -76,7 +76,7 @@ void transform(SUPLEMENT suplementi[], CENA cene[], int n) {
     int i;
     for(i=0; i<n; i++) {
         strcpy(cene[i].naziv, suplementi[i].naziv);
-        double br_dana = 1.0 * suplementi[i].br_kapsula
+        double br_dana = (double) suplementi[i].br_kapsula
           / suplementi[i].br_po_danu;
         cene[i].cena = suplementi[i].cena / br_dana;
     }
