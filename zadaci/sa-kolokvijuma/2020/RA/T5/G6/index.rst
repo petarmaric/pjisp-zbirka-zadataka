@@ -5,7 +5,7 @@
 
 
 Zadatak "Filmovi u bioskopu"
-=================================
+============================
 
 .. sectionauthor:: Milica Milutinović <mmilutinovic@uns.ac.rs>
 
