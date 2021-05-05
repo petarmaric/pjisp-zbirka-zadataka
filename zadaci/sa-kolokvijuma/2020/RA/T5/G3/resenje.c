@@ -51,7 +51,7 @@ void add_to_list(ARTIKAL *new, ARTIKAL **head) {
     {
         new->sledeci = pret1->sledeci;	
         pret1->sledeci = new;
-    }	
+    }
 }
 
 ARTIKAL *create_new_item(int ser_br, char naz[], unsigned kol, double jed_c){
@@ -74,14 +74,14 @@ ARTIKAL *create_new_item(int ser_br, char naz[], unsigned kol, double jed_c){
 void read_list_from(FILE *in, ARTIKAL **head) {
     int tmpSerBr;
     char tmpNaz[MAX_NAZIV];
-	unsigned tmpKol;
+    unsigned tmpKol;
     double tmpJedC;
-    
+
     while(fscanf(in,"%lf %u %s %d",&tmpJedC,&tmpKol,tmpNaz,&tmpSerBr) != EOF)
-	{
-		ARTIKAL *new = create_new_item(tmpSerBr, tmpNaz, tmpKol, tmpJedC);
+    {
+        ARTIKAL *new = create_new_item(tmpSerBr, tmpNaz, tmpKol, tmpJedC);
         add_to_list(new, head);
-	}
+    }
 }
 
 void save_item_to(ARTIKAL *x) {
@@ -154,7 +154,7 @@ int main(int arg_num, char *args[]) {
         printf("Budzet mora biti pozitivan broj!\n");
         exit(22);
     }
-	
+
     FILE *in  = safe_fopen(args[2],"r", 1);
 
     ARTIKAL *head;
