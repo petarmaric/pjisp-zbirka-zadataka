@@ -1,4 +1,4 @@
-**Životinjsko carstvo (nije čokoladica :D)**
+
 
 Iz zadate ulazne datoteke ``zivotinje.txt`` učitati podatke u jednostruko
 spregnutu listu, gde struktura ``zivotinja_st`` sadrži sledeća polja:

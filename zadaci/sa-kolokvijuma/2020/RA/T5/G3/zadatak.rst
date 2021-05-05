@@ -1,4 +1,4 @@
-**Prodavnica**
+
 
 Iz zadate ulazne datoteke ``artikli.txt`` učitati podatke u jednostruko
 spregnutu listu, gde struktura ``artikal_st`` sadrži sledeća polja:
@@ -17,7 +17,7 @@ Struktura ``artikal_st``, takođe sadrži i polja potrebna za pravilno
 formiranje jednostruko spregnute liste. Prilikom formiranja jednostruko
 spregnute liste voditi računa o tome da je potrebno elemente sortirati u
 rastućem redosledu serijskog broja. Polje strukture ``ukupna_cena``
-izračunati na sledeći način: ``ukupna_cena = kolicina \* jedinicna_cena``.
+izračunati na sledeći način: ``ukupna_cena = kolicina * jedinicna_cena``.
 
 Potrebno je kupiti sve one artikle iz ponude prodavnice čiji zbir
 ukupnih cena ne premašuje vrednost zadatog budžeta ``budzet`` . Nakon
@@ -36,7 +36,7 @@ Primer poziva::
     ./a.out 22800 artikli.txt
 
 sa zadatim argumentom ``budzet = 22800`` i zadatim ulazom u
-datoteci ``artikli.txt``:
+datoteci ``artikli.txt``::
 
     123.19 3 limun 2396
     4399.99 25 trenerka 1179
