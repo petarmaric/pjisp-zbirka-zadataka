@@ -19,7 +19,7 @@ void init_list(ARTIKAL **head) {
 
 void add_to_list(ARTIKAL *new, ARTIKAL **head) {
     ARTIKAL *tek,*pret1;
-    int nakraj=1;    
+    int nakraj=1;
     if(*head == NULL) {
         *head = new;
         return;
@@ -46,10 +46,10 @@ void add_to_list(ARTIKAL *new, ARTIKAL **head) {
     }
 
     if(nakraj == 1)
-        pret1 -> sledeci = new;	
+        pret1 -> sledeci = new;
     else
     {
-        new->sledeci = pret1->sledeci;	
+        new->sledeci = pret1->sledeci;
         pret1->sledeci = new;
     }
 }
@@ -112,7 +112,7 @@ void korpa(ARTIKAL * head,double budzet)
 
     while(head != NULL) {
         if(budzet-head->ukupna_cena >= 0)
-        {	
+        {
             kupljeno++;
             budzet-=head->ukupna_cena;
             save_item_to(head);
@@ -150,7 +150,7 @@ int main(int arg_num, char *args[]) {
     }
 
     if(atof(args[1]) < 0)
-    {	
+    {
         printf("Budzet mora biti pozitivan broj!\n");
         exit(22);
     }
@@ -162,7 +162,7 @@ int main(int arg_num, char *args[]) {
 
     read_list_from(in, &head);
 
-    korpa(head,atof(args[1]));	
+    korpa(head,atof(args[1]));
 
     destroy_list(&head);
 
