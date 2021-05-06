@@ -64,7 +64,7 @@ void add_sorted(CVOR** glava, CVOR* novi) {
 
 void read(FILE* in, CVOR** glava) {
     char ime[MAX_IME], prezime[MAX_IME], naslov[MAX_NASLOV];
-	int cena, kopije;
+    int cena, kopije;
     while(fscanf(in, "%s %s %s %d %d", ime, prezime, naslov, &cena, &kopije)
     !=EOF){
         CVOR* new = create_node(ime, prezime, naslov, cena, kopije);
@@ -74,9 +74,9 @@ void read(FILE* in, CVOR** glava) {
 
 void write(FILE* out, CVOR* glava) {
     while(glava != NULL) {
-    	glava->zarada = glava->cena * glava->kopije;
+        glava->zarada = glava->cena * glava->kopije;
         fprintf(out, "%s %s %s %d\n", glava->prezime, glava->ime,
-        	glava->naslov, glava->zarada);
+            glava->naslov, glava->zarada);
         glava = glava->sledeci;
     }
 }
@@ -94,14 +94,14 @@ CVOR* find_best_seller(CVOR* glava) {
     CVOR* best = NULL;
     
     while(glava != NULL) {
-    	if(best == NULL) {
-    		best = glava;
-    	} else if(glava->zarada > best->zarada) {
-    		best = glava;
-    	}
-    	glava = glava->sledeci;
+        if(best == NULL) {
+            best = glava;
+        } else if(glava->zarada > best->zarada) {
+            best = glava;
+        }
+        glava = glava->sledeci;
     }
-	return best;
+    return best;
 }
 
 int main(int brArg, char* args[]) {
@@ -117,14 +117,14 @@ int main(int brArg, char* args[]) {
     read(in, &glava);
     write(stdout, glava);
     CVOR* best = find_best_seller(glava);
-	if(best != NULL) {
-		fprintf(stdout, "Knjiga koja je zaradila najvise novca je "
-			+"%s %s %s %d %d.\n", best->ime, best->prezime, best->naslov,
-			best->cena, best->kopije);
-	} else {
-		fprintf(stdout, "Ne postoji knjiga koja je zaradila najvise novca.\n");
-	}
+    if(best != NULL) {
+        fprintf(stdout, "Knjiga koja je zaradila najvise novca je "
+            +"%s %s %s %d %d.\n", best->ime, best->prezime, best->naslov,
+            best->cena, best->kopije);
+    } else {
+        fprintf(stdout, "Ne postoji knjiga koja je zaradila najvise novca.\n");
+    }
     fclose(in);
-   	clear(&glava);
+    clear(&glava);
     return 0;
 }

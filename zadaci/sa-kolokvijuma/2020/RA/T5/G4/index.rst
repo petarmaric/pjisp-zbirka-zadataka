@@ -1,5 +1,4 @@
 .. index::
-   Algoritmi ; Pretraga
    Datoteke ; Tekstualne
    Dinamičke strukture ; Lista
 

@@ -9,7 +9,7 @@ typedef struct cvor_st{
     char ime[MAX_IME];
     char prezime[MAX_IME];
     char naslov[MAX_NASLOV];
-	char zanr[MAX_IME];
+    char zanr[MAX_IME];
     int cena;
     struct cvor_st* sledeci;
 }CVOR;
@@ -38,7 +38,7 @@ int cena) {
     strcpy(tmp->ime, ime);
     strcpy(tmp->prezime, prezime);
     strcpy(tmp->naslov, naslov);
-	strcpy(tmp->zanr, zanr);
+    strcpy(tmp->zanr, zanr);
     tmp->cena = cena;
     tmp->sledeci = NULL;
     return tmp; 
@@ -63,10 +63,10 @@ void add_sorted(CVOR** glava, CVOR* novi) {
 
 void read(FILE* in, CVOR** glava) {
     char ime[MAX_IME];
-	char prezime [MAX_IME];
-	char naslov[MAX_NASLOV];
-	int cena;
-	char zanr[MAX_IME];
+    char prezime [MAX_IME];
+    char naslov[MAX_NASLOV];
+    int cena;
+    char zanr[MAX_IME];
     while(fscanf(in, "%s %s %s %s %d", ime, prezime, naslov, zanr, &cena)!=EOF)
     {
         CVOR* new = create_node(ime, prezime, naslov, zanr, cena);
@@ -92,18 +92,18 @@ void clear(CVOR** glava) {
 }
 
 int pronadji_zanr(CVOR* glava, char* zanr) {
-	if(glava == NULL) {
+    if(glava == NULL) {
         return;
     }
     int s = 0;
     
     while(glava != NULL) {
         if(strcmp(glava->zanr, zanr) == 0) {
-        	s += glava->cena;
+            s += glava->cena;
         }
         glava = glava->sledeci;
     }
-	return s;
+    return s;
 }
 
 int main(int brArg, char* args[]) {
@@ -119,13 +119,13 @@ int main(int brArg, char* args[]) {
     read(in, &glava);
     write(stdout, glava);
     int suma = pronadji_zanr(glava, args[2]);
-	if(suma != 0) {
-		fprintf(stdout, "Knjige zanra %s kostaju ukupno %d din.\n",
-		args[2], suma);
-	} else {
-		fprintf(stdout, "Ne postoje knjige zanra %s.\n", args[2]);
-	}
+    if(suma != 0) {
+        fprintf(stdout, "Knjige zanra %s kostaju ukupno %d din.\n",
+        args[2], suma);
+    } else {
+        fprintf(stdout, "Ne postoje knjige zanra %s.\n", args[2]);
+    }
     fclose(in);
-   	clear(&glava);
+    clear(&glava);
     return 0;
 }
