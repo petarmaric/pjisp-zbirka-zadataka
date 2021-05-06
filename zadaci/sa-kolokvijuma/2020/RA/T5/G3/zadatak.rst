@@ -3,15 +3,15 @@
 Iz zadate ulazne datoteke ``artikli.txt`` učitati podatke u jednostruko
 spregnutu listu, gde struktura ``artikal_st`` sadrži sledeća polja:
 
--  *serijski_broj* (ceo broj),
+- serijski_broj (ceo broj),
 
--  *naziv (*\ jedna reč, maksimalno 13 karaktera\ *),*
+- naziv (jedna reč, maksimalno 13 karaktera),
 
--  *kolicina* (pozitivan ceo broj),
+- kolicina (pozitivan ceo broj),
 
--  *jedinicna_cena* (realan broj) i
+- jedinicna_cena (realan broj) i
 
--  *ukupna_cena* (realan broj).
+- ukupna_cena (realan broj).
 
 Struktura ``artikal_st``, takođe sadrži i polja potrebna za pravilno
 formiranje jednostruko spregnute liste. Prilikom formiranja jednostruko

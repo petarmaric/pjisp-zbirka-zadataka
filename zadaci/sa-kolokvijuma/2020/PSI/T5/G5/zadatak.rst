@@ -3,13 +3,13 @@
 Iz zadate ulazne datoteke ``zivotinje.txt`` učitati podatke u jednostruko
 spregnutu listu, gde struktura ``zivotinja_st`` sadrži sledeća polja:
 
--  *naziv (*\ jedna reč, maksimalno 8 karaktera\ *),*
+- naziv (jedna reč, maksimalno 8 karaktera),
 
--  *prosecna_starost* (pozitivan ceo broj),
+- prosecna_starost (pozitivan ceo broj),
 
--  *broj_jedinki* (realan broj) i
+- broj_jedinki (realan broj) i
 
--  *zasticena* (jedna reč, maksimalno 11 karaktera).
+- zasticena (jedna reč, maksimalno 11 karaktera).
 
 Struktura ``zivotinja_st``, takođe sadrži i polja potrebna za pravilno
 formiranje jednostruko spregnute liste. Jednostruko spregnutu listu
