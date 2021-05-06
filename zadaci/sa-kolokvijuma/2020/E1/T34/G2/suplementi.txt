@@ -1,0 +1,5 @@
+vitamin_c 40 2 344.99
+cink 30 1 128.00
+vitamin_d 60 3 899.99
+B12 44 3 755.55
+magnezijum 20 1 455.66
