@@ -129,7 +129,9 @@ Očekivana identacija (uvlačenje) koda je 4 space karaktera.
   Potražite na internetu kako se to radi. U nastavku je prikazano kako se to može proveriti u okviru Linux Terminala.
 
   U okviru Terminala, proverite da li vaš kod ima tabova: ``cat -T resenje.c`` (na mestu tabova, biće ispisano ``^I``)
+
   Konverziju u space karaktere možete uraditi pomoću komande: ``expand -t4 resenje.c > resenje-with-spaces.c``
+
   Potom, zamenu originalnog fajla uraditi na sledeći način: ``mv resenje-with-spaces.c resenje.c``
 
 Ukoliko postavljate ulazni i izlazni fajl (ili ispis programa u fajlu), referencirajte ih.
@@ -137,6 +139,7 @@ Ukoliko postavljate ulazni i izlazni fajl (ili ispis programa u fajlu), referenc
 
   Tako obezbeđujete jedan izvor podataka, odnosno, eliminišete šansu da napravite grešku prilikom kopiranja sadržaja datoteke u tekst zadatka.
   Ono što vaš program obradi i rezultat njegovog rada će biti i u samom tekstu zadatka.
+  Niste u obavezi da uz rešenje prilažete ulazni i izlazni fajl, ali u samom tekstu zadatka se mora naći barem jedan primer.
 
 Izaberite i pridržavajte se jedne kodne konvencije (stila).
   Nemojte mešati više različitih konvencija u okviru jednog rešenja.
