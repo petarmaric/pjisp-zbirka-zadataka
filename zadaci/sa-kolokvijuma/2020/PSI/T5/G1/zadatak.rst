@@ -15,10 +15,10 @@ Učitati knjige u jednostruko spregnutu listu i uraditi sledeće:
 #. Sortirati knjige po ceni u rastućem redosledu pri dodavanju u listu
 #. Izračunati ukupnu zaradu svake knjige korišćenjem cene po komadu i broja prodatih kopija.
 #. Na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
-- prezime pisca
-- ime pisca
-- naslov knjige
-- ukupna zarada
+    - prezime pisca
+    - ime pisca
+    - naslov knjige
+    - ukupna zarada
 #. Pronaći knjigu koja je zaradila najviše novca i ispisati njene podatke na standardni izlaz (ekran Terminala)
 
 Primer poziva:
