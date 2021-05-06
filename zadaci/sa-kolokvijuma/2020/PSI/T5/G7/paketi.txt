@@ -1,0 +1,6 @@
+Tanjiri  3.2 DA
+Igracka  2.1 NE
+Stolica 14.6 NE
+Laptop   5.4 DA
+Sto     23.7 NE
+Monitor  4.2 DA
