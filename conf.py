@@ -84,7 +84,8 @@ language = 'sr_Latn'
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = [
     '_build', 'Thumbs.db', '.DS_Store',
-    'TODO.rst', 'README.rst', '**/zadatak.rst'
+    'TODO.rst', 'README.rst', '**/zadatak.rst',
+    'manual-teaching-assistants.rst',
 ]
 
 # The default programming language to highlight source code in.
