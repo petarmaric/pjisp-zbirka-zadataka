@@ -5,10 +5,10 @@
 #define MAX_NAZIV 8+1
 #define MAX_ZASTICENA 11+1
 
-typedef struct zivotinja_st { 
+typedef struct zivotinja_st {
     char naziv[MAX_NAZIV];
     double prosecna_starost;
-    int broj_jedinki ;
+    int broj_jedinki;
     char zasticena[MAX_ZASTICENA];
     struct zivotinja_st *sledeci;
 }ZIVOTINJA;
@@ -36,11 +36,11 @@ ZIVOTINJA *create_new_item(char naziv[], double ps, int broj_jed) {
     new->prosecna_starost = ps;
     new->broj_jedinki = broj_jed;
 
-    if(broj_jed < 300)
+    if(broj_jed < 300) {
         strcpy(new->zasticena,"zasticena");
-    else
+    } else {
         strcpy(new->zasticena,"nezasticena");
-
+    }
     new->sledeci = NULL;
 
     return new;
@@ -51,8 +51,7 @@ void read_list_from(FILE *in, ZIVOTINJA **head) {
     double tmp_ps;
     int tmp_broj_jed;
 
-    while(fscanf(in,"%lf %s %d",&tmp_ps,tmp_naziv,&tmp_broj_jed) != EOF)
-    {
+    while(fscanf(in,"%lf %s %d",&tmp_ps,tmp_naziv,&tmp_broj_jed) != EOF) {
         ZIVOTINJA *new = create_new_item(tmp_naziv, tmp_ps, tmp_broj_jed);
         add_to_list(new, head);
     }
@@ -88,18 +87,19 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
     return fp;
 }
 
-void najugrozenija(ZIVOTINJA *head)
-{
-        if(head==NULL)
+void najugrozenija(ZIVOTINJA *head) {
+
+        if(head==NULL) {
             return;
+        }
 
         ZIVOTINJA *ugrozena=head;
 
-        while(head!=NULL)
-        {
-            if(head->broj_jedinki < ugrozena->broj_jedinki)
-                ugrozena=head;
+        while(head!=NULL) {
 
+            if(head->broj_jedinki < ugrozena->broj_jedinki) {
+                ugrozena=head;
+            }
             head = head->sledeci;
         }
 

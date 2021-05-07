@@ -27,17 +27,14 @@ void add_to_list(ARTIKAL *new, ARTIKAL **head) {
     pret1=*head;
     tek=*head;
 
-    if(new->serijski_broj < tek->serijski_broj)
-    {
+    if(new->serijski_broj < tek->serijski_broj) {
         new->sledeci=*head;
         *head=new;
         return;
     }
 
-    while(tek != NULL)
-    {
-        if(new->serijski_broj < tek->serijski_broj)
-        {
+    while(tek != NULL) {
+        if(new->serijski_broj < tek->serijski_broj) {
             nakraj=0;
             break;
         }
@@ -45,16 +42,15 @@ void add_to_list(ARTIKAL *new, ARTIKAL **head) {
         tek = tek->sledeci;
     }
 
-    if(nakraj == 1)
+    if(nakraj == 1) {
         pret1 -> sledeci = new;
-    else
-    {
+    } else {
         new->sledeci = pret1->sledeci;
         pret1->sledeci = new;
     }
 }
 
-ARTIKAL *create_new_item(int ser_br, char naz[], unsigned kol, double jed_c){
+ARTIKAL *create_new_item(int ser_br, char naz[], unsigned kol, double jed_c) {
     ARTIKAL *new = (ARTIKAL *)malloc(sizeof(ARTIKAL));
     if (new == NULL) {
         printf("Not enough RAM!\n");
@@ -77,8 +73,7 @@ void read_list_from(FILE *in, ARTIKAL **head) {
     unsigned tmpKol;
     double tmpJedC;
 
-    while(fscanf(in,"%lf %u %s %d",&tmpJedC,&tmpKol,tmpNaz,&tmpSerBr) != EOF)
-    {
+    while(fscanf(in,"%lf %u %s %d",&tmpJedC,&tmpKol,tmpNaz,&tmpSerBr) != EOF) {
         ARTIKAL *new = create_new_item(tmpSerBr, tmpNaz, tmpKol, tmpJedC);
         add_to_list(new, head);
     }
@@ -103,16 +98,16 @@ void destroy_list(ARTIKAL **head) {
     }
 }
 
-void korpa(ARTIKAL * head,double budzet)
-{
+void korpa(ARTIKAL * head,double budzet) {
+
     int kupljeno=0;
 
-    if (head==NULL)
+    if (head==NULL) {
         return;
+    }
 
     while(head != NULL) {
-        if(budzet-head->ukupna_cena >= 0)
-        {
+        if(budzet-head->ukupna_cena >= 0) {
             kupljeno++;
             budzet-=head->ukupna_cena;
             save_item_to(head);
@@ -120,13 +115,11 @@ void korpa(ARTIKAL * head,double budzet)
         head = head->sledeci;
     }
 
-    if(kupljeno == 0)
-    {
+    if(kupljeno == 0) {
         printf("Nemate dovoljno novca za kupovinu");
         printf(" nijednog od proizvoda iz ponude!\n");
         exit(333);
-    }else
-    {
+    } else {
         printf("\n\tUspesno ste kupili %d proizvoda.\n\t",kupljeno);
         printf("Na racunu vam je ostalo %.2lf din.\n",budzet);
     }
@@ -149,8 +142,7 @@ int main(int arg_num, char *args[]) {
         exit(11);
     }
 
-    if(atof(args[1]) < 0)
-    {
+    if(atof(args[1]) < 0) {
         printf("Budzet mora biti pozitivan broj!\n");
         exit(22);
     }

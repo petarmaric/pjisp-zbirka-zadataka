@@ -4,13 +4,9 @@ Iz zadate ulazne datoteke ``artikli.txt`` učitati podatke u jednostruko
 spregnutu listu, gde struktura ``artikal_st`` sadrži sledeća polja:
 
 - serijski_broj (ceo broj),
-
 - naziv (jedna reč, maksimalno 13 karaktera),
-
 - kolicina (pozitivan ceo broj),
-
 - jedinicna_cena (realan broj) i
-
 - ukupna_cena (realan broj).
 
 Struktura ``artikal_st``, takođe sadrži i polja potrebna za pravilno
@@ -36,20 +32,9 @@ Primer poziva::
     ./a.out 22800 artikli.txt
 
 sa zadatim argumentom ``budzet = 22800`` i zadatim ulazom u
-datoteci ``artikli.txt``::
+datoteci ``artikli.txt``:
 
-    123.19 3 limun 2396
-    4399.99 25 trenerka 1179
-    109.11 8 tecni_sapun 7421
-    45.01 5 luk 7965
-    999.99 3 duks 4598
-    89.99 22 banane 8942
-    145.11 78 pasta_za_zube 1124
-    189.22 23 arf 3211
-    5899.39 7 pantalone 1698
-    215.49 13 ananas 1147
-    386.29 49 regenerator 3352
-    2354.99 15 farmerke 4452
+.. literalinclude:: artikli.txt
 
 i očekivanim ispisom na standardnom izlazu::
 
