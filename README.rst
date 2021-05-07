@@ -15,6 +15,10 @@ If you just want to read this book you can either buy its printed edition or
 
 .. _`access it online for free`: http://pjisp.petarmaric.com/zbirka-zadataka
 
+Instructions for ACS Teaching Assistants
+----------------------------------------
+
+Please use the manual for `adding new assignments <manual-teaching-assistants.rst>`_.
 
 Installation
 ============
