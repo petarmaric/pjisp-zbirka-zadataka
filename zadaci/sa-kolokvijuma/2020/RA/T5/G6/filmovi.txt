@@ -1,4 +1,0 @@
-Pokajanje 250 8
-Hari_Poter_2 300 10
-Gospodar_prstenova_1 400 6
-Hari_Poter_4 400 30
