@@ -1,0 +1,13 @@
+Raspolozivi ispravni autobusi:
+
+Lasta ispravan 980.99 80
+Benko ispravan 950.89 70
+Raketa ispravan 1030.40 55
+Kimmel ispravan 1070.35 61
+Lasta ispravan 960.55 64
+Benko ispravan 975.70 63
+Raketa ispravan 900.89 80
+Kimmel ispravan 1045.99 55
+
+Prevoznik Lasta ne moze da preveze sve prijavljene putnike na letovanje!
+Maksimalna moguca zarada svih autoprevoznika iznosi 786720.42 dinara.
