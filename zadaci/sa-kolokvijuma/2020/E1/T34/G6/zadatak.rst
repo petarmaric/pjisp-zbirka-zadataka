@@ -18,14 +18,7 @@ Tip filtera (izvođač ili tip) biće prosleđen kao drugi parametar komandne li
 
 Primer datoteke ``ulaz.txt``::
 
-    azra domaca Meni_se_duso_od_tebe_ne_rastaje
-    pearl_jam strana Off_he_goes
-    rhcp strana Give_it_away
-    azra domaca Ako_znas_bilo_sto
-    dubioza_kolektiv domaca Rijaliti
-    dubioza_kolektiv strana All_equal 
-    pearl_jam strana Black
-
+.. literalinclude:: ulaz.txt
 
 Primer poziva 1::
 
@@ -33,8 +26,7 @@ Primer poziva 1::
 
 i očekivanim izlazom u datoteci ``izlaz.txt``::
 
-    azra domaca Meni_se_duso_od_tebe_ne_rastaje
-    azra domaca Ako_znas_bilo_sto
+.. literalinclude:: izlaz1.txt
     
 
 Primer poziva 2::
@@ -43,9 +35,6 @@ Primer poziva 2::
 
 i očekivanim izlazom u datoteci ``izlaz.txt``::
 
-    pearl_jam strana Off_he_goes
-    rhcp strana Give_it_away
-    dubioza_kolektiv strana All_equal
-    pearl_jam strana Black
+.. literalinclude:: izlaz2.txt
     
     
