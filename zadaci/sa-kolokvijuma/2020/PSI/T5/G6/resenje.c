@@ -25,9 +25,9 @@ PICE* dodaj_u_listu(PICE *glava, char naziv[], double cena, unsigned kolicina){
         glava->cena = cena;
         glava->kolicina = kolicina;
         glava->sledeci = NULL;
-    }else
+    }else{
         glava->sledeci = dodaj_u_listu(glava->sledeci, naziv, cena, kolicina);
-    
+    }
     return glava;
 }
 
