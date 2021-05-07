@@ -40,17 +40,13 @@ void filter_songs(FILE *out, SONG *songs, int n, char *filter, char *value){
     int i;
     
     for(i=0; i<n; i++){
-        if (strcmp(filter, "izvodjac")==0 && strcmp(value, songs[i].group)==0)
+        if ((strcmp(filter,"izvodjac")==0 && strcmp(value, songs[i].group)==0)
+           || (strcmp(filter,"tip")==0 && strcmp(value, songs[i].poreklo)==0))
+            
             fprintf(out, "%s %s %s\n", 
                          songs[i].group, 
                          songs[i].poreklo, 
                          songs[i].name);
-        
-        else if (strcmp(filter, "tip")==0 && strcmp(value, songs[i].poreklo)==0)
-            fprintf(out, "%s %s %s\n",
-                          songs[i].group, 
-                          songs[i].poreklo, 
-                          songs[i].name);
     }
 
 }
