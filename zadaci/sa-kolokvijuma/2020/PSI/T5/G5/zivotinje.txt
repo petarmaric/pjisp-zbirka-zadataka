@@ -1,0 +1,12 @@
+50.5 Kornjaca 214
+70 krokodil 324
+10 Zmija 126
+70 orao 548
+12 Pas 358
+15 macka 578
+12 zaba 412
+21.5 Kengur 345
+15 koala 125
+112 Meduza 245
+21.5 panda 68
+45 Oktopod 269
