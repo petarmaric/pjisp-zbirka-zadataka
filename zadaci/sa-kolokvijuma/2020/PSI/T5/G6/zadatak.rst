@@ -11,11 +11,7 @@ Naravno, struktura ``rodjus_st`` sadrži i podatke potrebne za pravilno formiran
 
 Zadata datoteka ``ulazna.txt``::
     
-    Pepsi 150 5
-    Fanta 180 3
-    Crno_vino 350.5 4
-    Pivo 90 20
-    Kisela_voda 50 5
+.. literalinclude:: ulaz.txt
 
 Primer poziva programa 1::
 
@@ -23,7 +19,7 @@ Primer poziva programa 1::
 
 i očekivanim ispisom na standardnom izlazu 1::
 
-    Nema dovoljno novca, kupovina se ne može u celosti obaviti.
+.. literalinclude:: izlaz1.txt
  
  
 Primer poziva programa 2::
@@ -32,6 +28,6 @@ Primer poziva programa 2::
 
 i očekivanim ispisom na standardnom izlazu 2::
 
-    Kupovina je obavljena.
+.. literalinclude:: izlaz2.txt
     
     
