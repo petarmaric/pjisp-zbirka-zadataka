@@ -13,16 +13,8 @@ Primer poziva programa::
 
 sa zadatim ulazom u datoteci ``filmovi.txt``::
 
-    Pokajanje 250 8
-    Hari_Poter_2 300 10
-    Gospodar_prstenova_1 400 6
-    Hari_Poter_4 400 30
+.. literalinclude:: ulaz.txt
 
 i očekivanim ispisom na standardnom izlazu ::
 
-    Naziv filma: Gospodar_prstenova_1, ukupna zarada: 2400.00
-    Naziv filma: Hari_Poter_2, ukupna zarada: 3000.00
-    Naziv filma: Hari_Poter_4, ukupna zarada: 12000.00
-    Naziv filma: Pokajanje, ukupna zarada: 2000.00
-
-    Ukupna ostvarena zarada je: 19400.00
+.. literalinclude:: izlaz.txt

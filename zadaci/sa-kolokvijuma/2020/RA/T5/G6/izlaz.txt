@@ -1,0 +1,6 @@
+Naziv filma: Gospodar_prstenova_1, ukupna zarada: 2400.00
+Naziv filma: Hari_Poter_2, ukupna zarada: 3000.00
+Naziv filma: Hari_Poter_4, ukupna zarada: 12000.00
+Naziv filma: Pokajanje, ukupna zarada: 2000.00
+
+Ukupna ostvarena zarada je: 19400.00
