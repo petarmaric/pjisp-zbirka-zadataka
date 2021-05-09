@@ -19,7 +19,7 @@ FILE* open_file(char* ime, char* mode) {
 
     FILE* fp = fopen(ime, mode);
     if(fp==NULL) 
-	{
+    {
         printf("Greska pri otvaranju datoteke %s", ime);
         exit(42);
     }
@@ -34,7 +34,7 @@ CVOR* create_node(char* ime, char* prezime, char* naslov, int cena,
 int kopije) {
     CVOR* tmp = malloc(sizeof(CVOR));
     if(tmp==NULL)
-	{
+    {
         printf("Ne moze se zauzeti memorija");
         exit(123);
     }
@@ -51,11 +51,11 @@ void add_sorted(CVOR** glava, CVOR* novi) {
 
    CVOR* trenutni;
     if(*glava==NULL || (*glava)->cena >= novi->cena) 
-	{
+    {
         novi->sledeci = *glava;
         *glava = novi;
     } else 
-	{
+    {
         trenutni = *glava;
         while(trenutni->sledeci!=NULL && trenutni->sledeci->cena < novi->cena)
         {
@@ -71,7 +71,7 @@ void read(FILE* in, CVOR** glava) {
     int cena, kopije;
     while(fscanf(in, "%s %s %s %d %d", ime, prezime, naslov, &cena, &kopije)
     !=EOF)
-	{
+    {
         CVOR* new = create_node(ime, prezime, naslov, cena, kopije);
         add_sorted(glava, new);
     }
@@ -79,7 +79,7 @@ void read(FILE* in, CVOR** glava) {
 
 void write(FILE* out, CVOR* glava) {
     while(glava != NULL) 
-	{
+    {
         glava->zarada = glava->cena * glava->kopije;
         fprintf(out, "%s %s %s %d\n", glava->prezime, glava->ime,
             glava->naslov, glava->zarada);
@@ -89,7 +89,7 @@ void write(FILE* out, CVOR* glava) {
 
 void clear(CVOR** glava) {
     if(*glava == NULL) 
-	{
+    {
         return;
     }
     clear(&((*glava)->sledeci));
@@ -101,12 +101,12 @@ CVOR* find_best_seller(CVOR* glava) {
     CVOR* best = NULL;
     
     while(glava != NULL) 
-	{
+    {
         if(best == NULL) 
-		{
+        {
             best = glava;
         } else if(glava->zarada > best->zarada) 
-		{
+        {
             best = glava;
         }
         glava = glava->sledeci;
@@ -117,7 +117,7 @@ CVOR* find_best_seller(CVOR* glava) {
 int main(int brArg, char* args[]) {
     
     if(brArg!=2) 
-	{
+    {
         printf("Program nije dobro pozvan");
         exit(42);
     }
@@ -129,12 +129,12 @@ int main(int brArg, char* args[]) {
     write(stdout, glava);
     CVOR* best = find_best_seller(glava);
     if(best != NULL) 
-	{
+    {
         fprintf(stdout, "Knjiga koja je zaradila najvise novca je "
             +"%s %s %s %d %d.\n", best->ime, best->prezime, best->naslov,
             best->cena, best->kopije);
     } else 
-	{
+    {
         fprintf(stdout, "Ne postoji knjiga koja je zaradila najvise novca.\n");
     }
     fclose(in);
