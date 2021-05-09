@@ -17,7 +17,8 @@ typedef struct cvor_st{
 FILE* open_file(char* ime, char* mode) {
 
     FILE* fp = fopen(ime, mode);
-    if(fp==NULL) {
+    if(fp==NULL) 
+	{
         printf("Greska pri otvaranju datoteke %s", ime);
         exit(42);
     }
@@ -31,7 +32,8 @@ void init(CVOR** glava) {
 CVOR* create_node(char* ime, char* prezime, char* naslov, char* zanr, 
 int cena) {
     CVOR* tmp = malloc(sizeof(CVOR));
-    if(tmp==NULL){
+    if(tmp==NULL)
+	{
         printf("Ne moze se zauzeti memorija");
         exit(123);
     }
@@ -47,10 +49,12 @@ int cena) {
 void add_sorted(CVOR** glava, CVOR* novi) {
 
    CVOR* trenutni;
-    if(*glava==NULL || (*glava)->cena >= novi->cena) {
+    if(*glava==NULL || (*glava)->cena >= novi->cena) 
+	{
         novi->sledeci = *glava;
         *glava = novi;
-    } else {
+    } else 
+	{
         trenutni = *glava;
         while(trenutni->sledeci!=NULL && trenutni->sledeci->cena < novi->cena)
         {
@@ -75,7 +79,8 @@ void read(FILE* in, CVOR** glava) {
 }
 
 void write(FILE* out, CVOR* glava) {
-    while(glava != NULL) {
+    while(glava != NULL) 
+	{
         fprintf(out, "%s %s %d %s\n", glava->prezime, glava->ime, glava->cena,
          glava->naslov);
         glava = glava->sledeci;
@@ -83,7 +88,8 @@ void write(FILE* out, CVOR* glava) {
 }
 
 void clear(CVOR** glava) {
-    if(*glava == NULL) {
+    if(*glava == NULL) 
+	{
         return;
     }
     clear(&((*glava)->sledeci));
@@ -92,13 +98,16 @@ void clear(CVOR** glava) {
 }
 
 int pronadji_zanr(CVOR* glava, char* zanr) {
-    if(glava == NULL) {
+    if(glava == NULL) 
+	{
         return;
     }
     int s = 0;
     
-    while(glava != NULL) {
-        if(strcmp(glava->zanr, zanr) == 0) {
+    while(glava != NULL) 
+	{
+        if(strcmp(glava->zanr, zanr) == 0) 
+		{
             s += glava->cena;
         }
         glava = glava->sledeci;
@@ -108,7 +117,8 @@ int pronadji_zanr(CVOR* glava, char* zanr) {
 
 int main(int brArg, char* args[]) {
     
-    if(brArg!=3) {
+    if(brArg!=3) 
+	{
         printf("Program nije dobro pozvan");
         exit(42);
     }
@@ -119,10 +129,12 @@ int main(int brArg, char* args[]) {
     read(in, &glava);
     write(stdout, glava);
     int suma = pronadji_zanr(glava, args[2]);
-    if(suma != 0) {
+    if(suma != 0) 
+	{
         fprintf(stdout, "Knjige zanra %s kostaju ukupno %d din.\n",
         args[2], suma);
-    } else {
+    } else 
+	{
         fprintf(stdout, "Ne postoje knjige zanra %s.\n", args[2]);
     }
     fclose(in);

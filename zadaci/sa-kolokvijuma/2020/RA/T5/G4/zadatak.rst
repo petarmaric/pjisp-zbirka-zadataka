@@ -14,10 +14,12 @@ Učitati knjige u jednostruko spregnutu listu i uraditi sledeće:
 
 #. Sortirati knjige po ceni u rastućem redosledu pri dodavanju u listu
 #. Na standardni izlaz (ekran Terminala) ispisati sledeće informacije:
+
     - prezime pisca
     - ime pisca
     - cena
     - naslov knjige
+	
 #. Pronaći sve knjige za žanr koji je prosleđen kao argument komandne linije, sabrati cene tih knjiga i ispisati na standardni izlaz (ekran Terminala)
 
 Primer poziva:

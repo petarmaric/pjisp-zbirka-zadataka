@@ -4,7 +4,7 @@
 
 
 Zadatak "Žanrovi knjiga"
-=================
+========================
 
 .. sectionauthor:: Milena Počuča <milenapocuca@uns.ac.rs>
 
