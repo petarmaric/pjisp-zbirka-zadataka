@@ -1,0 +1,6 @@
+0.84 Hiljadu_brodova
+0.81 Gorila
+1.02 U_prolece
+0.60 Petlja
+1.14 Povratak
+0.51 Deca_zla
