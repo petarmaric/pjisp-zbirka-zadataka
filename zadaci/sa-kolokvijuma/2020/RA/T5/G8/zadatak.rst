@@ -21,8 +21,6 @@ Napomene:
 - Ukoliko za unete podatke od strane korisnika ne postoje podaci očekivan izlaz je prikazan u stavci pod rednim brojem 5.
 
 1. Primer poziva::
-.. code:: bash
-
    ./a.out balet.txt
 
 2. Unos naziva baleta preko terminala::

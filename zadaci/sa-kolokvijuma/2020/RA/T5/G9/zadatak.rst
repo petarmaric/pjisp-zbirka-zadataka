@@ -20,8 +20,6 @@ Napomene:
 - Ukoliko za unete podatke od strane korisnika ne postoje podaci očekivan izlaz je prikazan u stavci pod rednim brojem 5.
 
 1. Primer poziva::
-.. code:: bash
-
    ./a.out magacin.txt
 
 2. Zadati ulaz u datoteci magacin.txt::
