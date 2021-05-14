@@ -34,7 +34,7 @@ int main(int arg_num, char **args) {
     char *krediti_in_filename = args[2];
 
     FILE *in  = safe_fopen(krediti_in_filename,  "r", 1);
- 	
+     
     struct krediti krediti[MAX_NIZ];
     
     int n = 0;
@@ -76,13 +76,13 @@ void ucitaj_kredite(FILE *in, struct krediti krediti[], int *n){
 void ispisi_kredit(FILE *out, struct krediti kredit){
     fprintf(out, "%s %s %s %s %u %u %f %u\n", 
                     kredit.ime,
-        			kredit.prezime,
-        			kredit.vrsta,
-       				kredit.odobren,
-        			kredit.iznos_kredita,
-        			kredit.ucesce,
-        			kredit.kamata,
-        			kredit.broj_godina);
+                    kredit.prezime,
+                    kredit.vrsta,
+                       kredit.odobren,
+                    kredit.iznos_kredita,
+                    kredit.ucesce,
+                    kredit.kamata,
+                    kredit.broj_godina);
 }
 
 void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
@@ -103,7 +103,7 @@ void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
                 zarada += (krediti[i].iznos_kredita - krediti[i].ucesce)/100 
                 * krediti[i].kamata * krediti[i].broj_godina;
             }
-        }	
+        }    
     }
 
     if(postoji == 0){
@@ -116,7 +116,7 @@ void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
         }
         else{
             fprintf(out, "\nNema odobrenih kredita.");
-        }	
+        }    
         fclose(out);
     }
 }
