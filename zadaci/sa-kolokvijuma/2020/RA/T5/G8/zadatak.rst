@@ -21,9 +21,11 @@ Napomene:
 - Ukoliko za unete podatke od strane korisnika ne postoje podaci očekivan izlaz je prikazan u stavci pod rednim brojem 5.
 
 1. Primer poziva::
+
    ./a.out balet.txt
 
 2. Unos naziva baleta preko terminala::
+
     Naziv baleta: zizela
 
 3. Zadati ulaz u datoteci balet.txt::
