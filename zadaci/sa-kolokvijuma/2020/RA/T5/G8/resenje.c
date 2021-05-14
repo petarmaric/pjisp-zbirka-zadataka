@@ -96,7 +96,8 @@ void save(int postoji, BALET *head, char naziv[]){
 	}
 }
 
-void save_item_to(int *postoji, unsigned ukupnaCena, char naziv[], unsigned brojKarata) {
+void save_item_to(int *postoji, unsigned ukupnaCena, 
+char naziv[], unsigned brojKarata) {
 	if(*postoji==1){ 
 		printf("\nUkupno prodatih karata za balet "
         "pod nazivom %s je %u.\n"
@@ -104,7 +105,8 @@ void save_item_to(int *postoji, unsigned ukupnaCena, char naziv[], unsigned broj
 		    naziv, brojKarata, ukupnaCena);
 	}
 	else{
-		printf("\nZa unete podatke od strane korisnika ne postoje podaci.\n\n");
+		printf("\nZa unete podatke od strane korisnika"
+        " ne postoje podaci.\n\n");
 	}
 }
 

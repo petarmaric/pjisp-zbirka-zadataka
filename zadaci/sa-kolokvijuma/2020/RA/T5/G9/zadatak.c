@@ -44,13 +44,16 @@ void print(MAGACIN *head){
 	
 
 	while(head != NULL) {
-		printf("\n%d %d %s %d", head->sifraMagacina, head->sifraProizvoda, head->nazivProizvoda, head->cena);
+		printf("\n%d %d %s %d", head->sifraMagacina, 
+        head->sifraProizvoda, 
+        head->nazivProizvoda, head->cena);
 		head = head->next;
 	
 	}
 
 }
-MAGACIN *create_new_item(unsigned sifraMagacina, unsigned sifraProizvoda,  char nazivProizvoda[], unsigned cena) {
+MAGACIN *create_new_item(unsigned sifraMagacina, 
+unsigned sifraProizvoda, char nazivProizvoda[], unsigned cena) {
     MAGACIN *new = (MAGACIN*)malloc(sizeof(MAGACIN));
     if (new == NULL) {
         printf("Not enough RAM!\n");
@@ -73,17 +76,22 @@ void read_list_from(FILE *in, MAGACIN **head) {
     char nazivProizvoda[MAX_NAZIV];
     unsigned cena;
     
-    while(fscanf(in, "%u %u %s %u", &sifraMagacina, &sifraProizvoda, nazivProizvoda, &cena) != EOF) {
+    while(fscanf(in, "%u %u %s %u", &sifraMagacina,
+    &sifraProizvoda, nazivProizvoda, &cena) != EOF) {
         MAGACIN *new = create_new_item(sifraMagacina, sifraProizvoda, nazivProizvoda, cena);
         add_to_list(new, head);
     }
 }
 
-void save_item_to(int postoji, char nazivProizvoda[], unsigned sifraMagacina, unsigned sifraProizvoda, unsigned ukupnaVrednost, unsigned brojProizvoda) {
+void save_item_to(int postoji, char nazivProizvoda[], unsigned sifraMagacina,
+unsigned sifraProizvoda, unsigned ukupnaVrednost, unsigned brojProizvoda) {
 
 	if(postoji==1){
-		printf("\nUkupno proizvoda sa sifrom %u, pod nazivom %s u magacinu sa sifrom %u ima %u.\nUkupna vrednost proizvoda je %u dinara.", 
-		    sifraProizvoda, nazivProizvoda, sifraMagacina, brojProizvoda, ukupnaVrednost);
+        printf("\nUkupno proizvoda sa sifrom %u, "
+        "pod nazivom %s u magacinu sa sifrom %u ima "
+        "%u.\nUkupna vrednost proizvoda je %u dinara.", 
+            sifraProizvoda, nazivProizvoda,
+            sifraMagacina, brojProizvoda, ukupnaVrednost);
 	}
 	else{
 		printf("\nNe postoji magacin i proizvod za unete podatke.");
@@ -136,7 +144,8 @@ void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
 
 int main(int arg_num, char *args[]) {
     if (arg_num != 2) {
-        printf("Program treba pozvati na sledeci nacin: %s nazivUlazneDatoteke.txt\n", args[0]);
+        printf("Program treba pozvati na sledeci nacin:"
+        "%s nazivUlazneDatoteke.txt\n", args[0]);
         exit(11);
     }
 
