@@ -25,7 +25,8 @@ void ispisi_kredit(FILE *out, struct krediti kredit);
 
 int main(int arg_num, char **args) {
     if (arg_num != 3) {
-        printf("Program treba pokrenuti sa: %s vrstaKredita krediti.txt\n", args[0]);
+        printf("Program treba pokrenuti sa: %s vrstaKredita krediti.txt\n",
+        args[0]);
         exit(1);
     }
 
