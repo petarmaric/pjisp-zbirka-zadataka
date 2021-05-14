@@ -25,7 +25,7 @@ Napomene:
 
 2. Zadati ulaz u datoteci magacin.txt::
 
-.. literalinclude:: magacin.txt
+    .. literalinclude:: magacin.txt
 
 3. Ispis podataka na terminal i unos šifre magacina i šifre proizvoda preko terminala:::
     
