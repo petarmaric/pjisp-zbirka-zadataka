@@ -78,7 +78,7 @@ void ispisi_kredit(FILE *out, struct krediti kredit){
                     kredit.ime,
                     kredit.prezime,
                     kredit.vrsta,
-                       kredit.odobren,
+                    kredit.odobren,
                     kredit.iznos_kredita,
                     kredit.ucesce,
                     kredit.kamata,
