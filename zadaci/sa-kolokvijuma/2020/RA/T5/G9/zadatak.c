@@ -6,7 +6,7 @@
 
 typedef struct magacin {
     unsigned sifraMagacina;
-	unsigned sifraProizvoda;
+    unsigned sifraProizvoda;
     char nazivProizvoda[MAX_NAZIV];
     unsigned cena;
     struct magacin *next;
@@ -21,7 +21,7 @@ void add_to_list(MAGACIN *new, MAGACIN **head) {
         *head = new;
         return;
     } 
-    
+ 
     if((*head)->sifraMagacina > new->sifraMagacina) {
         new->next = *head;
         *head = new;
@@ -46,9 +46,8 @@ void print(MAGACIN *head){
         printf("\n%d %d %s %d", head->sifraMagacina, 
         head->sifraProizvoda, 
         head->nazivProizvoda, head->cena);
-		head = head->next;
+        head = head->next;
     }
-
 }
 MAGACIN *create_new_item(unsigned sifraMagacina, 
 unsigned sifraProizvoda, char nazivProizvoda[], unsigned cena) {
@@ -91,7 +90,7 @@ unsigned sifraProizvoda, unsigned ukupnaVrednost, unsigned brojProizvoda) {
         "%u.\nUkupna vrednost proizvoda je %u dinara.", 
             sifraProizvoda, nazivProizvoda,
             sifraMagacina, brojProizvoda, ukupnaVrednost);
-	}
+    }
     else{
         printf("\nNe postoji magacin i proizvod za unete podatke.");
     }
@@ -114,8 +113,6 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
     return fp;
 }
 
-
-
 void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
     unsigned brojProizvoda = 0;
     unsigned ukupnaVrednost = 0;
@@ -136,7 +133,8 @@ void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
         }	
         head = head->next;
 	}
-    save_item_to(postoji, nazivProizvoda, sm, sp, ukupnaVrednost, brojProizvoda);
+    save_item_to(postoji, nazivProizvoda, sm,
+    sp, ukupnaVrednost, brojProizvoda);
 }
 
 int main(int arg_num, char *args[]) {

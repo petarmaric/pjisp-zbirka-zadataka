@@ -8,7 +8,7 @@
 typedef struct balet {
     unsigned sediste;
     char nazivBaleta[MAX_NAZIV_BALETA];
-	char rezervisao[MAX_REZERVISAO];
+    char rezervisao[MAX_REZERVISAO];
     unsigned cena;
     struct balet *next;
 }BALET;
@@ -20,7 +20,7 @@ void init_list(BALET **head) {
 char *lower(char str[])
 {
     int i;
-	
+
     for(i=0; i<strlen(str); i++)
     {
         if(str[i] >= 65 && str[i] <= 90)
@@ -76,7 +76,7 @@ void read_list_from(FILE *in, BALET **head) {
     unsigned cena;
     
     while(fscanf(in, "%u %s %s %u", &sediste, nazivBaleta, rezervisao, &cena)
-		!= EOF) {
+        != EOF) {
         BALET *new = create_new_item(sediste, nazivBaleta, rezervisao, cena);
         add_to_list(new, head);
     }
@@ -85,14 +85,14 @@ void save(int postoji, BALET *head, char naziv[]){
     char nazivBaleta[MAX_NAZIV_BALETA];
     if(postoji==1){
          while(head != NULL) {
-		   	strcpy(nazivBaleta,head->nazivBaleta); 
+            strcpy(nazivBaleta,head->nazivBaleta); 
             if (strcmp(lower(naziv),
             lower(head->nazivBaleta)) == 0) {
                 printf("Sediste: %u \t Rezervisao: %s \t Cena: %u din\n",
                 head->sediste, head->rezervisao, head->cena);
             }
             head = head->next;
-	   	}
+        }
     }
 }
 
@@ -127,7 +127,6 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
     return fp;
 }
 
-
 void algoritam(char naziv[], BALET *head, int *postoji){
     unsigned ukupnaCena = 0;	
     unsigned brojKarata = 0;
@@ -137,7 +136,6 @@ void algoritam(char naziv[], BALET *head, int *postoji){
     if (head == NULL) { 
         return;	
     }
-	
 
     while(head != NULL) {
         strcpy(nazivBaleta,head->nazivBaleta);    
@@ -148,7 +146,7 @@ void algoritam(char naziv[], BALET *head, int *postoji){
             *postoji=1;	
         }	
         head = head->next;
-	}
+    }
     save_item_to(postoji, ukupnaCena, nB, brojKarata);
 }
 
