@@ -51,7 +51,8 @@ void add_to_list(BALET *new, BALET **head) {
     }    
 }
 
-BALET *create_new_item(unsigned sediste, char nazivBaleta[],  char rezervisao[], unsigned cena) {
+BALET *create_new_item(unsigned sediste, char nazivBaleta[], 
+char rezervisao[], unsigned cena) {
     BALET *new = (BALET*)malloc(sizeof(BALET));
     if (new == NULL) {
         printf("Nema dovoljno memorije!\n");
@@ -74,7 +75,8 @@ void read_list_from(FILE *in, BALET **head) {
     char nazivBaleta[MAX_NAZIV_BALETA];
     unsigned cena;
     
-    while(fscanf(in, "%u %s %s %u", &sediste, nazivBaleta, rezervisao, &cena) != EOF) {
+    while(fscanf(in, "%u %s %s %u", &sediste, nazivBaleta, rezervisao, &cena)
+		!= EOF) {
         BALET *new = create_new_item(sediste, nazivBaleta, rezervisao, cena);
         add_to_list(new, head);
     }
@@ -84,8 +86,10 @@ void save(int postoji, BALET *head, char naziv[]){
 	if(postoji==1){
 		while(head != NULL) {
 		  	strcpy(nazivBaleta,head->nazivBaleta); 
-	   		if (strcmp(lower(naziv),lower(head->nazivBaleta)) == 0) {
-	   			printf("Sediste: %u \t Rezervisao: %s \t Cena: %u din\n", head->sediste, head->rezervisao, head->cena);
+	   		if (strcmp(lower(naziv),
+			lower(head->nazivBaleta)) == 0) {
+	   			printf("Sediste: %u \t Rezervisao: %s \t Cena: %u din\n",
+				head->sediste, head->rezervisao, head->cena);
 	   		}
 	   		head = head->next;
 	   	}
@@ -94,7 +98,9 @@ void save(int postoji, BALET *head, char naziv[]){
 
 void save_item_to(int *postoji, unsigned ukupnaCena, char naziv[], unsigned brojKarata) {
 	if(*postoji==1){ 
-		printf("\nUkupno prodatih karata za balet pod nazivom %s je %u.\nUkupna zarada je %u dinara.\n\n", 
+		printf("\nUkupno prodatih karata za balet "
+        "pod nazivom %s je %u.\n"
+        "Ukupna zarada je %u dinara.\n\n", 
 		    naziv, brojKarata, ukupnaCena);
 	}
 	else{
@@ -150,7 +156,8 @@ void algoritam(char naziv[], BALET *head, int *postoji){
 
 int main(int arg_num, char *args[]) {
     if (arg_num != 2) {
-        printf("Program treba pozvati na sledeci nacin: %s nazivUlazneDatoteke.txt\n", args[0]);
+        printf("Program treba pozvati na sledeci nacin: "
+        "%s nazivUlazneDatoteke.txt\n", args[0]);
         exit(11);
     }
     
