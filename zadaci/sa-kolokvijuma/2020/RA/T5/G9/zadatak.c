@@ -120,19 +120,19 @@ void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
     int postoji=0;
 
     if (head == NULL) { 
-        return;	
+        return;    
     }
-	
+    
 
-    while(head != NULL) {	  
-	   	if (head->sifraMagacina==sm && head->sifraProizvoda==sp) {
+    while(head != NULL) {      
+           if (head->sifraMagacina==sm && head->sifraProizvoda==sp) {
             postoji=1;
             strcpy(nazivProizvoda, head->nazivProizvoda);
             ukupnaVrednost += head->cena;
             brojProizvoda++;
-        }	
+        }    
         head = head->next;
-	}
+    }
     save_item_to(postoji, nazivProizvoda, sm,
     sp, ukupnaVrednost, brojProizvoda);
 }
@@ -154,7 +154,7 @@ int main(int arg_num, char *args[]) {
     init_list(&head);
     read_list_from(in, &head);
     print(head);
-	
+    
     printf("\n\nUnesite sifru magacina: ");
     scanf("%u", &sifraMagacina);
     printf("Unesite sifru proizovoda: ");

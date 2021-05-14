@@ -102,7 +102,7 @@ char naziv[], unsigned brojKarata) {
         printf("\nUkupno prodatih karata za balet "
         "pod nazivom %s je %u.\n"
         "Ukupna zarada je %u dinara.\n\n", 
-		    naziv, brojKarata, ukupnaCena);
+            naziv, brojKarata, ukupnaCena);
     }
     else{
         printf("\nZa unete podatke od strane korisnika"
@@ -128,23 +128,23 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
 }
 
 void algoritam(char naziv[], BALET *head, int *postoji){
-    unsigned ukupnaCena = 0;	
+    unsigned ukupnaCena = 0;    
     unsigned brojKarata = 0;
     char nazivBaleta[MAX_NAZIV_BALETA];
     char nB[MAX_NAZIV_BALETA];
 
     if (head == NULL) { 
-        return;	
+        return;    
     }
 
     while(head != NULL) {
         strcpy(nazivBaleta,head->nazivBaleta);    
-	   	if (strcmp(lower(naziv),lower(nazivBaleta)) == 0) {
+           if (strcmp(lower(naziv),lower(nazivBaleta)) == 0) {
             strcpy(nB, head->nazivBaleta);
             ukupnaCena += head->cena;
             brojKarata++;
-            *postoji=1;	
-        }	
+            *postoji=1;    
+        }    
         head = head->next;
     }
     save_item_to(postoji, ukupnaCena, nB, brojKarata);
