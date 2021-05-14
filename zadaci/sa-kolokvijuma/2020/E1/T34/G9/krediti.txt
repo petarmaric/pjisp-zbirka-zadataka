@@ -1,0 +1,7 @@
+Dragan Dragic stambeni ne 3600000 500000 2.5 10
+Sava Tomic kes ne 7000000 20000 4 5
+Luka Lukic auto da 2606000 110000 5.99 5
+Tatjana Jovic auto da 1400000 0 7.5 7
+Teodor Matic kes ne 4500000 20000 5.99 11
+Nikola Nesic kes da 200000 0 8 3
+Milica Markovic stambeni ne 8000000 20000 2.5 4
