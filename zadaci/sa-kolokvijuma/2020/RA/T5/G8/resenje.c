@@ -59,8 +59,8 @@ char rezervisao[], unsigned cena) {
         exit(21);
     }
 
-	new->sediste = sediste;
-	strcpy(new->rezervisao, rezervisao);
+    new->sediste = sediste;
+    strcpy(new->rezervisao, rezervisao);
     strcpy(new->nazivBaleta, nazivBaleta);
     new->cena = cena;
 
@@ -71,7 +71,7 @@ char rezervisao[], unsigned cena) {
 
 void read_list_from(FILE *in, BALET **head) {
     unsigned sediste;
-	char rezervisao[MAX_REZERVISAO];
+    char rezervisao[MAX_REZERVISAO];
     char nazivBaleta[MAX_NAZIV_BALETA];
     unsigned cena;
     
@@ -82,32 +82,32 @@ void read_list_from(FILE *in, BALET **head) {
     }
 }
 void save(int postoji, BALET *head, char naziv[]){
-	char nazivBaleta[MAX_NAZIV_BALETA];
-	if(postoji==1){
-		while(head != NULL) {
-		  	strcpy(nazivBaleta,head->nazivBaleta); 
-	   		if (strcmp(lower(naziv),
-			lower(head->nazivBaleta)) == 0) {
-	   			printf("Sediste: %u \t Rezervisao: %s \t Cena: %u din\n",
-				head->sediste, head->rezervisao, head->cena);
-	   		}
-	   		head = head->next;
+    char nazivBaleta[MAX_NAZIV_BALETA];
+    if(postoji==1){
+         while(head != NULL) {
+		   	strcpy(nazivBaleta,head->nazivBaleta); 
+            if (strcmp(lower(naziv),
+            lower(head->nazivBaleta)) == 0) {
+                printf("Sediste: %u \t Rezervisao: %s \t Cena: %u din\n",
+                head->sediste, head->rezervisao, head->cena);
+            }
+            head = head->next;
 	   	}
-	}
+    }
 }
 
 void save_item_to(int *postoji, unsigned ukupnaCena, 
 char naziv[], unsigned brojKarata) {
-	if(*postoji==1){ 
-		printf("\nUkupno prodatih karata za balet "
+    if(*postoji==1){ 
+        printf("\nUkupno prodatih karata za balet "
         "pod nazivom %s je %u.\n"
         "Ukupna zarada je %u dinara.\n\n", 
 		    naziv, brojKarata, ukupnaCena);
-	}
-	else{
-		printf("\nZa unete podatke od strane korisnika"
+    }
+    else{
+        printf("\nZa unete podatke od strane korisnika"
         " ne postoje podaci.\n\n");
-	}
+    }
 }
 
 void destroy_list(BALET **head) {
@@ -129,31 +129,27 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
 
 
 void algoritam(char naziv[], BALET *head, int *postoji){
-	unsigned ukupnaCena = 0;	
-	unsigned brojKarata = 0;
-	char nazivBaleta[MAX_NAZIV_BALETA];
-	char nB[MAX_NAZIV_BALETA];
-	
-	
-	if (head == NULL) { 
+    unsigned ukupnaCena = 0;	
+    unsigned brojKarata = 0;
+    char nazivBaleta[MAX_NAZIV_BALETA];
+    char nB[MAX_NAZIV_BALETA];
+
+    if (head == NULL) { 
         return;	
     }
 	
 
-	while(head != NULL) {
-		strcpy(nazivBaleta,head->nazivBaleta);  
-		  
+    while(head != NULL) {
+        strcpy(nazivBaleta,head->nazivBaleta);    
 	   	if (strcmp(lower(naziv),lower(nazivBaleta)) == 0) {
-			strcpy(nB, head->nazivBaleta);
-			ukupnaCena += head->cena;
-     		brojKarata++;
-			*postoji=1;
-			
+            strcpy(nB, head->nazivBaleta);
+            ukupnaCena += head->cena;
+            brojKarata++;
+            *postoji=1;	
         }	
-		head = head->next;
-
+        head = head->next;
 	}
-	save_item_to(postoji, ukupnaCena, nB, brojKarata);
+    save_item_to(postoji, ukupnaCena, nB, brojKarata);
 }
 
 int main(int arg_num, char *args[]) {
@@ -168,16 +164,16 @@ int main(int arg_num, char *args[]) {
 
     FILE *in  = safe_fopen(in_filename,  "r", 1);
 
-	char naziv[MAX_NAZIV_BALETA];
+    char naziv[MAX_NAZIV_BALETA];
 
-	printf("\nNaziv baleta: ");
-	scanf("%s", naziv);
+    printf("\nNaziv baleta: ");
+    scanf("%s", naziv);
 
     BALET *head;
     init_list(&head);
 
     read_list_from(in, &head);
-    
+  
     algoritam(naziv, head, &postoji);
     save(postoji, head, naziv);
     destroy_list(&head);

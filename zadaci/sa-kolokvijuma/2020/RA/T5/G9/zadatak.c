@@ -38,18 +38,16 @@ void add_to_list(MAGACIN *new, MAGACIN **head) {
 }
 
 void print(MAGACIN *head){
-	if (head == NULL) { 
-		return;
+    if (head == NULL) { 
+        return;
     }
-	
 
-	while(head != NULL) {
-		printf("\n%d %d %s %d", head->sifraMagacina, 
+    while(head != NULL) {
+        printf("\n%d %d %s %d", head->sifraMagacina, 
         head->sifraProizvoda, 
         head->nazivProizvoda, head->cena);
 		head = head->next;
-	
-	}
+    }
 
 }
 MAGACIN *create_new_item(unsigned sifraMagacina, 
@@ -60,9 +58,9 @@ unsigned sifraProizvoda, char nazivProizvoda[], unsigned cena) {
         exit(21);
     }
 
-	new->sifraMagacina = sifraMagacina;
-	new->sifraProizvoda = sifraProizvoda;
-	strcpy(new->nazivProizvoda, nazivProizvoda);
+    new->sifraMagacina = sifraMagacina;
+    new->sifraProizvoda = sifraProizvoda;
+    strcpy(new->nazivProizvoda, nazivProizvoda);
     new->cena = cena;
 
     new->next = NULL;
@@ -72,13 +70,14 @@ unsigned sifraProizvoda, char nazivProizvoda[], unsigned cena) {
 
 void read_list_from(FILE *in, MAGACIN **head) {
     unsigned sifraMagacina;
-	unsigned sifraProizvoda;
+    unsigned sifraProizvoda;
     char nazivProizvoda[MAX_NAZIV];
     unsigned cena;
     
     while(fscanf(in, "%u %u %s %u", &sifraMagacina,
     &sifraProizvoda, nazivProizvoda, &cena) != EOF) {
-        MAGACIN *new = create_new_item(sifraMagacina, sifraProizvoda, nazivProizvoda, cena);
+        MAGACIN *new = create_new_item(sifraMagacina,
+        sifraProizvoda, nazivProizvoda, cena);
         add_to_list(new, head);
     }
 }
@@ -86,16 +85,16 @@ void read_list_from(FILE *in, MAGACIN **head) {
 void save_item_to(int postoji, char nazivProizvoda[], unsigned sifraMagacina,
 unsigned sifraProizvoda, unsigned ukupnaVrednost, unsigned brojProizvoda) {
 
-	if(postoji==1){
+    if(postoji==1){
         printf("\nUkupno proizvoda sa sifrom %u, "
         "pod nazivom %s u magacinu sa sifrom %u ima "
         "%u.\nUkupna vrednost proizvoda je %u dinara.", 
             sifraProizvoda, nazivProizvoda,
             sifraMagacina, brojProizvoda, ukupnaVrednost);
 	}
-	else{
-		printf("\nNe postoji magacin i proizvod za unete podatke.");
-	}
+    else{
+        printf("\nNe postoji magacin i proizvod za unete podatke.");
+    }
 }
 
 void destroy_list(MAGACIN **head) {
@@ -118,28 +117,26 @@ FILE *safe_fopen(char *filename, char *mode, int error_code) {
 
 
 void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
-	unsigned brojProizvoda = 0;
-	unsigned ukupnaVrednost = 0;
-	char nazivProizvoda[MAX_NAZIV];
-	int postoji=0;
+    unsigned brojProizvoda = 0;
+    unsigned ukupnaVrednost = 0;
+    char nazivProizvoda[MAX_NAZIV];
+    int postoji=0;
 
-	if (head == NULL) { 
+    if (head == NULL) { 
         return;	
     }
 	
 
-	while(head != NULL) {
-  		  
+    while(head != NULL) {	  
 	   	if (head->sifraMagacina==sm && head->sifraProizvoda==sp) {
-			postoji=1;
-			strcpy(nazivProizvoda, head->nazivProizvoda);
-			ukupnaVrednost += head->cena;
-     		brojProizvoda++;
+            postoji=1;
+            strcpy(nazivProizvoda, head->nazivProizvoda);
+            ukupnaVrednost += head->cena;
+            brojProizvoda++;
         }	
-		head = head->next;
-
+        head = head->next;
 	}
-	save_item_to(postoji, nazivProizvoda, sm, sp, ukupnaVrednost, brojProizvoda);
+    save_item_to(postoji, nazivProizvoda, sm, sp, ukupnaVrednost, brojProizvoda);
 }
 
 int main(int arg_num, char *args[]) {
@@ -153,17 +150,17 @@ int main(int arg_num, char *args[]) {
 
     FILE *in  = safe_fopen(in_filename,  "r", 1);
 
-	unsigned sifraMagacina, sifraProizvoda;
+    unsigned sifraMagacina, sifraProizvoda;
 
     MAGACIN *head;
     init_list(&head);
     read_list_from(in, &head);
-	print(head);
+    print(head);
 	
-	printf("\n\nUnesite sifru magacina: ");
-	scanf("%u", &sifraMagacina);
-	printf("Unesite sifru proizovoda: ");
-	scanf("%u", &sifraProizvoda);
+    printf("\n\nUnesite sifru magacina: ");
+    scanf("%u", &sifraMagacina);
+    printf("Unesite sifru proizovoda: ");
+    scanf("%u", &sifraProizvoda);
 
     algoritam(head, sifraMagacina, sifraProizvoda);
     destroy_list(&head);
