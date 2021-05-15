@@ -12,6 +12,7 @@ typedef struct film{
 }FILM;
 
 FILM* kreiraj_cvor(char naziv[], double cena, unsigned broj){
+
     FILM *novi = malloc(sizeof(FILM));
     if(novi == NULL){
         printf("Nema dovoljno memorije!\n");
@@ -105,7 +106,7 @@ int main(int brArg, char *arg[]){
     
     ucitaj(&glava, dat);
     ispisi(glava);
-    destroy(&glava);
+    izbrisi_listu(&glava);
     
     return 0;
 }
