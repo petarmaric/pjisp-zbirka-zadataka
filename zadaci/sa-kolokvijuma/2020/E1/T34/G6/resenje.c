@@ -8,12 +8,10 @@
 #define ARRAY_LEN 20
 
 typedef struct song{
-    
     char group[GR_LEN];
     char name[SONG_LEN];
     char poreklo[ENG_LEN];
 }SONG;
-
 
 FILE* safe_open(char *name, char *mode){
     
@@ -26,7 +24,6 @@ FILE* safe_open(char *name, char *mode){
 }
 
 void read_songs(FILE *in, SONG *songs, int *n){
-
 
     while(fscanf(in, "%s %s %s", 
                      songs[*n].group, 

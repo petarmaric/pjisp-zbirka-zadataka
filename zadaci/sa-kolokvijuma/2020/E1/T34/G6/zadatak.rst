@@ -4,7 +4,6 @@ Iz zadate datoteke učitati statički niz struktura, pri čemu se struktura ``SO
 - naziv tipa (jedna reč, 6 karaktera)
 - naziv pesme (jedna reč, ukupno do 50 karaktera)
 
-
       
 Potrebno je u izlaznu datoteku filtrirati pesme na jedan od sledećih načina:
 
@@ -15,26 +14,22 @@ Tip filtera (izvođač ili tip) biće prosleđen kao drugi parametar komandne li
  a izlazna ``izlaz.txt``.
 
 
-
-Primer datoteke ``ulaz.txt``::
+Primer datoteke ``ulaz.txt``:
 
 .. literalinclude:: ulaz.txt
 
-Primer poziva 1::
+Primer poziva 1:
 
     ./a.out izvodjac azra
 
-i očekivanim izlazom u datoteci ``izlaz.txt``::
+i očekivanim izlazom u datoteci ``izlaz.txt``:
 
 .. literalinclude:: izlaz1.txt
     
-
-Primer poziva 2::
+Primer poziva 2:
 
     ./a.out tip strana
 
-i očekivanim izlazom u datoteci ``izlaz.txt``::
+i očekivanim izlazom u datoteci ``izlaz.txt``:
 
 .. literalinclude:: izlaz2.txt
-    
-    
