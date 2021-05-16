@@ -18,7 +18,7 @@ Primer datoteke ``ulaz.txt``:
 
 .. literalinclude:: ulaz.txt
 
-Primer poziva 1:
+Primer poziva 1::
 
     ./a.out izvodjac azra
 
@@ -26,7 +26,7 @@ i očekivanim izlazom u datoteci ``izlaz.txt``:
 
 .. literalinclude:: izlaz1.txt
     
-Primer poziva 2:
+Primer poziva 2::
 
     ./a.out tip strana
 
