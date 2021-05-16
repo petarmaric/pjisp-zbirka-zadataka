@@ -11,7 +11,7 @@ Zadata datoteka ``ulazna.txt``:
     
 .. literalinclude:: ulaz.txt
 
-Primer poziva programa 1:
+Primer poziva programa 1::
 
     ./a.out ulazna.txt 4000
 
@@ -19,7 +19,7 @@ i očekivanim ispisom na standardnom izlazu 1:
 
 .. literalinclude:: izlaz1.txt
  
-Primer poziva programa 2:
+Primer poziva programa 2::
 
     ./a.out ulazna.txt 5000   
 
