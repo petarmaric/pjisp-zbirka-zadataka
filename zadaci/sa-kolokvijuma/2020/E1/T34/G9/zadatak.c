@@ -73,7 +73,7 @@ void ucitaj_kredite(FILE *in, struct krediti krediti[], int *n){
     }
 }
 
-void ispisi_kredit(FILE *out, struct krediti kredit){
+void ispisi_kredit(FILE *out, struct krediti kredit) {
     fprintf(out, "%s %s %s %s %u %u %f %u\n", 
                     kredit.ime,
                     kredit.prezime,
@@ -85,7 +85,7 @@ void ispisi_kredit(FILE *out, struct krediti kredit){
                     kredit.broj_godina);
 }
 
-void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
+void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]) {
     int i;
     float zarada = 0;
     int postoji = 0;
@@ -95,10 +95,10 @@ void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
     strcpy(vrsta, vrsta_kredita);
     out = safe_fopen(strcat(vrsta,".txt"), "w", 2);
     
-    for(i=0; i<n; i++){
-        if(strcmp(krediti[i].vrsta, vrsta_kredita)== 0){
+    for(i=0; i<n; i++) {
+        if(strcmp(krediti[i].vrsta, vrsta_kredita)== 0) {
             postoji = 1;
-            if(strcmp(krediti[i].odobren, "da") == 0){
+            if(strcmp(krediti[i].odobren, "da") == 0) {
                 ispisi_kredit(out, krediti[i]);
                 zarada += (krediti[i].iznos_kredita - krediti[i].ucesce)/100 
                 * krediti[i].kamata * krediti[i].broj_godina;
@@ -106,15 +106,15 @@ void izlazni_podaci(struct krediti krediti[], int n, char vrsta_kredita[]){
         }    
     }
 
-    if(postoji == 0){
+    if(postoji == 0) {
         printf("Uneta vrsta kredita ne postoji");
         exit(11);
     } 
-    else{
-        if(zarada != 0){
+    else {
+        if(zarada != 0) {
             fprintf(out, "\nUkupna zarada banke je %.2f din.", zarada);
         }
-        else{
+        else {
             fprintf(out, "\nNema odobrenih kredita.");
         }    
         fclose(out);
