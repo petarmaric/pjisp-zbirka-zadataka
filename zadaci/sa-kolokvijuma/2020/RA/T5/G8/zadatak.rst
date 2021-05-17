@@ -30,7 +30,7 @@ Napomene:
 
 3. Zadati ulaz u datoteci balet.txt:
 
-    .. literalinclude:: balet.txt
+.. literalinclude:: balet.txt
 
 
 4. Očekivani izlaz na terminal ukoliko postoje podaci::
