@@ -4,8 +4,8 @@
    Dinamičke strukture ; Lista
 
 
-Zadatak "Magacin"
-====================
+Zadatak "Magacin mobilne i računarske opreme"
+=============================================
 
 .. sectionauthor:: Olja Anđelovski <andjelovski.olja@uns.ac.rs>
 

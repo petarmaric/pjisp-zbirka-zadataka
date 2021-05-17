@@ -49,6 +49,7 @@ void print(MAGACIN *head){
         head = head->next;
     }
 }
+
 MAGACIN *create_new_item(unsigned sifraMagacina, 
 unsigned sifraProizvoda, char nazivProizvoda[], unsigned cena) {
     MAGACIN *new = (MAGACIN*)malloc(sizeof(MAGACIN));
@@ -123,9 +124,8 @@ void algoritam(MAGACIN *head, unsigned sm, unsigned sp){
         return;    
     }
     
-
     while(head != NULL) {      
-           if (head->sifraMagacina==sm && head->sifraProizvoda==sp) {
+        if (head->sifraMagacina==sm && head->sifraProizvoda==sp) {
             postoji=1;
             strcpy(nazivProizvoda, head->nazivProizvoda);
             ukupnaVrednost += head->cena;

@@ -23,16 +23,9 @@ Napomene:
 
    ./a.out magacin.txt
 
-2. Zadati ulaz u datoteci magacin.txt::
+2. Zadati ulaz u datoteci magacin.txt:
 
-    123 11 maskica 900
-    251 75 punjac 300
-    954 30 kamera 1520
-    251 75 punjac 750
-    123 11 maskica 900
-    123 77 mis 1100
-    123 99 slusalice 470
-    251 78 baterija 230
+    .. literalinclude:: balet.txt
 
 3. Ispis podataka na terminal i unos šifre magacina i šifre proizvoda preko terminala:::
     

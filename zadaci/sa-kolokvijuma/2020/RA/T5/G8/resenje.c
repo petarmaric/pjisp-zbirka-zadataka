@@ -17,14 +17,13 @@ void init_list(BALET **head) {
     *head = NULL;
 }
 
-char *lower(char str[])
-{
+char *lower(char str[]) {
     int i;
 
-    for(i=0; i<strlen(str); i++)
-    {
-        if(str[i] >= 65 && str[i] <= 90)
+    for(i=0; i<strlen(str); i++) {
+        if(str[i] >= 65 && str[i] <= 90) {
             str[i] = str[i]+32;
+        }
     }
 
     return str;
@@ -81,6 +80,7 @@ void read_list_from(FILE *in, BALET **head) {
         add_to_list(new, head);
     }
 }
+
 void save(int postoji, BALET *head, char naziv[]){
     char nazivBaleta[MAX_NAZIV_BALETA];
     if(postoji==1){

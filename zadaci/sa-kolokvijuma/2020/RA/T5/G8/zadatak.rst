@@ -28,16 +28,9 @@ Napomene:
 
     Naziv baleta: zizela
 
-3. Zadati ulaz u datoteci balet.txt::
+3. Zadati ulaz u datoteci balet.txt:
 
-    5 Zizela Nadezda 310
-    11 Kopelija Nikola 230
-    23 Kopelija Milica 150
-    3 Zizela Igor 310
-    9 Pinokio Aleksandar 330
-    10 Zizela Ilija 250
-    22 Kopelija Milan 150
-    11 Zizela Stefan 250
+    .. literalinclude:: balet.txt
 
 
 4. Očekivani izlaz na terminal ukoliko postoje podaci::

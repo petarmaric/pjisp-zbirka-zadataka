@@ -4,8 +4,8 @@
    Dinamičke strukture ; Lista
 
 
-Zadatak "Balet"
-====================
+Zadatak "Rezervacija karata za baletsku predstavu"
+==================================================
 
 .. sectionauthor:: Olja Anđelovski <andjelovski.olja@uns.ac.rs>
 
