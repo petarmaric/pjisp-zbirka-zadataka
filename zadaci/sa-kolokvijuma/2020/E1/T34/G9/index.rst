@@ -3,8 +3,8 @@
    Statičke strukture ; Niz
 
 
-Zadatak "Banka"
-=============================
+Zadatak "Obrada zahteva za kredit u banci"
+==========================================
 
 .. sectionauthor:: Olja Anđelovski <andjelovski.olja@uns.ac.rs>
 
