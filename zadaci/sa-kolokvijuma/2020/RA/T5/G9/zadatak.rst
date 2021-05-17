@@ -27,7 +27,7 @@ Napomene:
 
   .. literalinclude:: magacin.txt
 
-3. Ispis podataka na terminal i unos šifre magacina i šifre proizvoda preko terminala:::
+3. Ispis podataka na terminal i unos šifre magacina i šifre proizvoda preko terminala::
     
     123 11 maskica 900
     123 99 slusalice 470
