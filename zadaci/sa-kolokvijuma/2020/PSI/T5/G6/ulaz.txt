@@ -1,0 +1,5 @@
+Pepsi 150 5
+Fanta 180 3
+Crno_vino 350.5 4
+Pivo 90 20
+Kisela_voda 50 5
