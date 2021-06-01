@@ -22,7 +22,7 @@ Primer poziva 1::
 
     ./a.out ulaz.txt neka_ekipa
 
-i očekivanim izlazom u datoteci ``izlaz.txt``:
+i očekivanim ispisom na standardnom izlazu:
 
 .. literalinclude:: izlaz1.txt
     
@@ -31,7 +31,7 @@ Primer poziva 2::
 
     ./a.out ulaz.txt idemo_nis
 
-i očekivanim izlazom u datoteci ``izlaz.txt``:
+i očekivanim ispisom na standardnom izlazu:
 
 .. literalinclude:: izlaz2.txt
 
@@ -40,7 +40,7 @@ Primer poziva 3::
 
     ./a.out ulaz.txt zasto_ne
 
-i očekivanim izlazom u datoteci ``izlaz.txt``:
+i očekivanim ispisom na standardnom izlazu:
 
 .. literalinclude:: izlaz3.txt
 
