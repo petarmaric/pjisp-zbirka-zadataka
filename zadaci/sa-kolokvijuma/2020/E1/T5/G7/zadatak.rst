@@ -18,7 +18,7 @@ Primer datoteke ``ulaz.txt``:
 .. literalinclude:: ulaz.txt
 
 
-Primer poziva 1:
+Primer poziva 1::
 
     ./a.out ulaz.txt neka_ekipa
 
@@ -27,7 +27,7 @@ i očekivanim izlazom u datoteci ``izlaz.txt``:
 .. literalinclude:: izlaz1.txt
     
 
-Primer poziva 2:
+Primer poziva 2::
 
     ./a.out ulaz.txt idemo_nis
 
@@ -36,7 +36,7 @@ i očekivanim izlazom u datoteci ``izlaz.txt``:
 .. literalinclude:: izlaz2.txt
 
 
-Primer poziva 3:
+Primer poziva 3::
 
     ./a.out ulaz.txt zasto_ne
 
