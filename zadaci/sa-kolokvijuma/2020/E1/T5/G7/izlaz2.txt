@@ -1,0 +1,8 @@
+real_ruma Ruma 57
+patriote_kg Kragujevac 47
+idemo_nis Nis 41
+zasto_ne Beograd 40
+mnogo_smo_jaki Novi_Sad 33
+proleter Zrenjanin 29
+
+Ekipa idemo_nis se nalazi u gornjoj polovini tabele!
