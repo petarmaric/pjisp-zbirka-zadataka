@@ -28,7 +28,7 @@ void dodajUListu(TAXI **glava, TAXI *novi) {
     dodajUListu(&((*glava)->sledeci), novi);
 }
 
-TAXI *kreirajNoviElement(char naziv[], char vrsta[], 
+TAXI *kreirajNoviElement(char naziv[], char vrsta[],
                         float cena_po_km, char zauzetost[]) {
     TAXI *novi = (TAXI *)malloc(sizeof(TAXI));
     if (novi == NULL) {
@@ -93,7 +93,7 @@ FILE *safe_open(char *imeDatoteke, char *rezim, int kodGreske) {
         printf("\tNije moguce otvoriti datoteku %s!\n", imeDatoteke);
         exit(kodGreske);
     }
-	
+
     return fp;
 }
 
@@ -119,7 +119,7 @@ void algoritam(FILE *izlazna, TAXI *glava, char *vrstaVozila, float novac) {
             zaradaKompanije += predjena_km*0.1*glava->cena_po_km;
         }
 
-        if(strcmp(glava->zauzetost,"slobodan") == 0 
+        if(strcmp(glava->zauzetost,"slobodan") == 0
                             && strcmp(glava->vrstaVozila, vrstaVozila) == 0) {
             brojac++;
         }
