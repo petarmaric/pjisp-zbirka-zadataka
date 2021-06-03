@@ -112,17 +112,12 @@ void pronadji_ekipu(char* naziv, CVOR* glava){
 
 
 void obrisi_listu(CVOR** glava){
-
-    if (*glava == NULL)
-        printf("Lista je prazna!\n");
-        
-    else{
-        CVOR* temp;
-        while(*glava != NULL){
-            temp = *glava; 
-            *glava = (*glava)->sledeci;
-            free(temp);
-        }
+    
+    CVOR* temp;
+    while(*glava != NULL){
+        temp = *glava; 
+        *glava = (*glava)->sledeci;
+        free(temp);
     }
 }
 

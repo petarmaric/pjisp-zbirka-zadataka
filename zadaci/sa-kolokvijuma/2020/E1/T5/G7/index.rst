@@ -6,7 +6,7 @@
 Zadatak "Sportska takmičenja"
 =============================
 
-.. sectionauthor:: Milena Počuča <mmilutinovic@uns.ac.rs>
+.. sectionauthor:: Milica Milutinović <mmilutinovic@uns.ac.rs>
 
 .. include:: zadatak.rst
 
