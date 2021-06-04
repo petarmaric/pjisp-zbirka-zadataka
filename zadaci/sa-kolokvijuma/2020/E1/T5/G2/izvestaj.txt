@@ -1,0 +1,13 @@
+karavan Halo 15.5 zauzet
+karavan Maxi 10.4 slobodan
+limuzina Mega 13.3 slobodan
+karavan Crveni 9.7 slobodan
+limuzina Pink 3.9 zauzet
+limuzina Grand 21.7 slobodan
+karavan Beli 12.1 slobodan
+limuzina Lux 30.0 slobodan
+limuzina Cool 10.4 zauzet
+
+Za 2500.0 din mozemo se najduze voziti 641.0 km Pink taksijem.
+Kompanija ce ukupno ostvariti profit od 750.0 dinara.
+Broj taksija koji su slobodni i tip vozila je limuzina: 3.
