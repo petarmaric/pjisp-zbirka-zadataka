@@ -10,8 +10,7 @@ Potrebno je u izlaznu datoteku filtrirati pesme na jedan od sledećih načina:
 - ukoliko je kao parametar komandne linije prosleđen ``izvodjac``, radi se filtriranje po nazivu grupe;
 - ukoliko je kao parametar komandne linije prosleđen ``tip``, radi se filtriranje po jezičkom poreklu pesme.
 
-Tip filtera (izvođač ili tip) biće prosleđen kao drugi parametar komandne linije, a naziv filtera će biti prosleđen kao treći parametar. Podrazumeva se da će ulazna datoteka da se zove ``ulaz.txt``,
- a izlazna ``izlaz.txt``.
+Tip filtera (izvođač ili tip) biće prosleđen kao drugi parametar komandne linije, a naziv filtera će biti prosleđen kao treći parametar. Podrazumeva se da će ulazna datoteka da se zove ``ulaz.txt``, a izlazna ``izlaz.txt``.
 
 
 Primer datoteke ``ulaz.txt``:

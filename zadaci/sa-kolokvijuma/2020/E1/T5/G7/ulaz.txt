@@ -1,0 +1,6 @@
+mnogo_smo_jaki Novi_Sad 33
+real_ruma Ruma 57
+idemo_nis Nis 41
+patriote_kg Kragujevac 47
+zasto_ne Beograd 40
+proleter Zrenjanin 29
