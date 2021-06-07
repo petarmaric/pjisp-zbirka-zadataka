@@ -31,41 +31,26 @@ Napomene:
   .. literalinclude:: racun.txt
 
 3. 
-   a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese pogrešnu šifru::
+   a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese pogrešnu šifru:
     
-   Unesite sifru proizvoda: 555
-   Stavka sa unetom sifrom ne postoji!
+  .. literalinclude:: ispis1.txt
    
-   b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese šifru koja se poklapa sa stavkom iz ulazne datoteke::
+   b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
     
-   Unesite sifru proizvoda: 111
-   Uspešno ste uklonili stavku!
+  .. literalinclude:: ispis2.txt
   
 4. 
-   a) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.a)::
+   a) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.a):
    
-   998 Paprika 289.00
-   111 Gauda 250.00
-   177 Paradajz 119.00
-   200 Salvete 133.00
-   123 Mleko 89.00
-   100 Noblice 75.00
+  .. literalinclude:: ispis3.txt
    
-   Ukupna cena proizvoda je 935.00 din.
+   b) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.b):
    
-   b) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.b)::
-   
-   998 Paprika 289.00
-   177 Paradajz 119.00
-   200 Salvete 133.00
-   123 Mleko 89.00
-   100 Noblice 75.00
-   
-   Ukupna cena proizvoda je 658.00 din.
+  .. literalinclude:: ispis4.txt
    
 
-5. Očekivani ispis u izlaznoj datoteci ukoliko radnik obriše sve stavke sa računa, a potom unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa)::
+5. Očekivani ispis u izlaznoj datoteci ukoliko radnik obriše sve stavke sa računa, a potom unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa):
 
-   Racun je bez stavki!
+  .. literalinclude:: ispis5.txt
 
 

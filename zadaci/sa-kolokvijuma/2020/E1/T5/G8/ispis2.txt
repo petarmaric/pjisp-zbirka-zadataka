@@ -1,0 +1,2 @@
+Unesite sifru proizvoda: 111
+Uspešno ste uklonili stavku!

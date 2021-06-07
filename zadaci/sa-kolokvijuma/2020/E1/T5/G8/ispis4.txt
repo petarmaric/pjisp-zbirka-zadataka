@@ -1,0 +1,7 @@
+998 Paprika 289.00
+177 Paradajz 119.00
+200 Salvete 133.00
+123 Mleko 89.00
+100 Noblice 75.00
+   
+Ukupna cena proizvoda je 658.00 din.
