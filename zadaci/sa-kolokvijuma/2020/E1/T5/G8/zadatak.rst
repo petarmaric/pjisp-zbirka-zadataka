@@ -40,7 +40,7 @@ a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik u
 
 b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
    
-  .. literalinclude:: ispis2.txt
+  .. literalinclude:: ispis6.txt
 
 
   
