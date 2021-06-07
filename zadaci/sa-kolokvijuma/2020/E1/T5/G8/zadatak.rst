@@ -42,6 +42,7 @@ b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik
 unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
    
   .. literalinclude:: ispis2.txt 
+
   
 4. 
 
