@@ -23,12 +23,12 @@ Napomene:
 
 1. Primer poziva::
 
-   ./a.out racun.txt zavrsniRacun.txt
+./a.out racun.txt zavrsniRacun.txt
    
    
 2. Zadati ulaz u datoteci ``racun.txt``:
 
-   .. literalinclude:: racun.txt
+.. literalinclude:: racun.txt
 
   
 3. 
@@ -36,13 +36,13 @@ Napomene:
 a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik 
    unese pogrešnu šifru:
     
-   .. literalinclude:: ispis1.txt
+.. literalinclude:: ispis1.txt
 
 
 b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik 
    unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
-   
-   .. literalinclude:: ispis2.txt
+
+.. literalinclude:: ispis2.txt
 
 
 4. 
@@ -50,18 +50,18 @@ b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik
 a) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), 
    a ukoliko je pre toga izvršio primer pod 3.a):
    
-   .. literalinclude:: ispis3.txt
+.. literalinclude:: ispis3.txt
 
   
 b) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. 
    (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.b):
    
-   .. literalinclude:: ispis4.txt
+.. literalinclude:: ispis4.txt
    
 
 5. Očekivani ispis u izlaznoj datoteci ukoliko radnik obriše sve stavke sa računa, a potom unese -1 za šifru proizvoda. 
    (Izračunavanje ukupne cene i štampanje računa):
 
-   .. literalinclude:: ispis5.txt
+.. literalinclude:: ispis5.txt
 
 
