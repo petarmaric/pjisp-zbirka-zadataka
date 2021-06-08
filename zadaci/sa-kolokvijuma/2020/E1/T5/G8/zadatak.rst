@@ -33,31 +33,35 @@ Napomene:
   
 3. 
 
-a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese pogrešnu šifru:
+a) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik 
+   unese pogrešnu šifru:
     
    .. literalinclude:: ispis1.txt
 
 
-b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
+b) Primer unosa šifre proizvoda preko terminala i ispis poruke ukoliko radnik 
+   unese šifru koja se poklapa sa stavkom iz ulazne datoteke:
    
    .. literalinclude:: ispis2.txt
 
 
-  
 4. 
 
-a) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.a):
+a) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), 
+   a ukoliko je pre toga izvršio primer pod 3.a):
    
    .. literalinclude:: ispis3.txt
 
   
-b) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.b):
+b) Očekivani ispis u izlaznoj datoteci ukoliko radnik unese -1 za šifru proizvoda. 
+   (Izračunavanje ukupne cene i štampanje računa), a ukoliko je pre toga izvršio primer pod 3.b):
    
    .. literalinclude:: ispis4.txt
    
 
-5. Očekivani ispis u izlaznoj datoteci ukoliko radnik obriše sve stavke sa računa, a potom unese -1 za šifru proizvoda. (Izračunavanje ukupne cene i štampanje računa):
+5. Očekivani ispis u izlaznoj datoteci ukoliko radnik obriše sve stavke sa računa, a potom unese -1 za šifru proizvoda. 
+   (Izračunavanje ukupne cene i štampanje računa):
 
-.. literalinclude:: ispis5.txt
+   .. literalinclude:: ispis5.txt
 
 
