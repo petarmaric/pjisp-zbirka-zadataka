@@ -1,0 +1,9 @@
+Petrovic stan 75.5 35 48
+Adamovic stan 65.9 35 48
+Milanovic kuca 123.8 47 60
+Zoric kuca 211.7 47 60
+Jovanovic stan 37.4 35 48
+Markovic kuca 171.2 47 60
+Grujic stan 77.9 35 48
+Rankovic kuca 186.6 47 60
+Radosavljevic stan 47.7 35 48

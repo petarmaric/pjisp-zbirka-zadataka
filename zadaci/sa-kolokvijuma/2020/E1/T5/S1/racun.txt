@@ -1,0 +1,16 @@
+75.5 2974.00 stan Petrovic
+65.9 2513.20 stan Adamovic
+123.8 6778.00 kuca Milanovic
+211.7 12052.00 kuca Zoric
+37.4 1309.00 stan Jovanovic
+171.2 9622.00 kuca Markovic
+77.9 3089.20 stan Grujic
+186.6 10546.00 kuca Rankovic
+47.7 1669.50 stan Radosavljevic
+
+
+Porodica Grujic zivi u stambenoj jedinici tipa stan i ima najveci mesecni racun.
+Srbijagas na mesecnom nivou zaradice 38998.00 din nakon sto porodice koje ne
+zive u stan plate svoje racune.
+Prosecan iznos mesecnog racuna koji svaka porodica
+treba da plati iznosi 2310.98 din.
