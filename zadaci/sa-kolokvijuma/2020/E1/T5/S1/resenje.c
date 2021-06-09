@@ -146,9 +146,9 @@ void najvisaCena(FILE *izlazna, GAS *glava,
     fprintf(izlazna, " stambenoj jedinici tipa %s", vrstaStambeneJedinice);
     fprintf(izlazna, " i ima najveci mesecni racun.\n");
     fprintf(izlazna, "Srbijagas na mesecnom nivou zaradice");
-    fprintf(izlazna, " %.2lf din nakon sto porodice koje ne ",prihodOstatka);
+    fprintf(izlazna, " %.2lf din nakon sto porodice koje ne\n",prihodOstatka);
     fprintf(izlazna, "zive u %s plate svoje racune.\n",vrstaStambeneJedinice);
-    fprintf(izlazna, "Prosecan iznos mesecnog racuna koji svaka porodica ");
+    fprintf(izlazna, "Prosecan iznos mesecnog racuna koji svaka porodica\n");
     fprintf(izlazna, "treba da plati iznosi %.2f din.",prihodProsVrste/brojac);
 
 }

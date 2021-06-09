@@ -10,5 +10,7 @@
 
 
 Porodica Grujic zivi u stambenoj jedinici tipa stan i ima najveci mesecni racun.
-Srbijagas na mesecnom nivou zaradice 38998.00 din nakon sto porodice koje ne zive u stan plate svoje racune.
-Prosecan iznos mesecnog racuna koji svaka porodica treba da plati iznosi 2310.98 din.
+Srbijagas na mesecnom nivou zaradice 38998.00 din nakon sto porodice koje ne
+zive u stan plate svoje racune.
+Prosecan iznos mesecnog racuna koji svaka porodica
+treba da plati iznosi 2310.98 din.
