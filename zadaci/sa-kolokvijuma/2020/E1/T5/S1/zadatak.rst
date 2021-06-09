@@ -28,12 +28,13 @@ tada se ukupna cena računa na sledeći način:
 ukupna_cena = granica * osnovna_cena_po_kubiku + (broj_potrošenih_kubika – granica) * cena_po_kubiku_nakon_što_je_pređena_granica
 
 U istu izlaznu datoteku potrebno je ispisati još i sledeće informacije:
-1. prezime porodice čiji je mesečni račun najveći, a koja živi u vrsti stambene jedinice koja je prosleđena kao
+
+#. prezime porodice čiji je mesečni račun najveći, a koja živi u vrsti stambene jedinice koja je prosleđena kao
 argument komandne linije,
-2. koliko će ukupno novčanih prihoda na mesečnom nivou ostvariti „Srbijagas“ nakon što sve porodice koje ne žive
+#. koliko će ukupno novčanih prihoda na mesečnom nivou ostvariti „Srbijagas“ nakon što sve porodice koje ne žive
 u vrsti stambene jedinice koja je prosleđena kao argument komandne linije plate svoj mesečni račun
 (izračunatu zaradu zaokružiti na dve decimale) i
-3. prosečan iznos mesečnog računa koji svaka porodica koja živi u vrsti stambene jedinice koja je prosleđena kao
+#. prosečan iznos mesečnog računa koji svaka porodica koja živi u vrsti stambene jedinice koja je prosleđena kao
 argument komandne linije treba da plati (izračunatu vrednost zaokružiti na dve decimale)
 
 Primer poziva programa::
