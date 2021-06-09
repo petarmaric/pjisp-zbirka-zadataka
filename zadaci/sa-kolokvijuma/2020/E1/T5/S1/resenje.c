@@ -134,8 +134,7 @@ void najvisaCena(FILE *izlazna, GAS *glava,
             prihodProsVrste += glava->ukupnaCena;
 
             brojac++;
-        }else
-        {
+        } else {
             prihodOstatka += glava->ukupnaCena;
         }
 
